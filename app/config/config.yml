@@ -38,7 +38,6 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         uservoice_key: "%uservoice_key%"
-        js_nonce: "2726c7f26c"
 
 # Swiftmailer Configuration
 swiftmailer:

@@ -29,6 +29,8 @@ imports:
 parameters:
     pim_job_product_batch_size: 100
     env(AKENEO_PIM_URL): ''
+    env(UNIQUE_ID): '2726c7f26c'
+    js_nonce: '%env(UNIQUE_ID)%'
 
 services:
     oro.cache.abstract:
@@ -91,3 +93,4 @@ framework:
 twig:
     globals:
         akeneo_pim_url: '%env(AKENEO_PIM_URL)%'
+        js_nonce: '%js_nonce%'

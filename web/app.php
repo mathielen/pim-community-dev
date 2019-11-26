@@ -30,12 +30,5 @@ if (!empty($loadBalancerTrustedIPs)) {
 
 $response = $kernel->handle($request);
 
-$policy = "default-src 'self' *.akeneo.com 'unsafe-inline';" .
-    "script-src 'self' 'unsafe-eval' 'nonce-2726c7f26c';" .
-    "frame-src *.youtube.com";
-$response->headers->set("Content-Security-Policy", $policy);
-$response->headers->set("X-Content-Security-Policy", $policy);
-$response->headers->set("X-WebKit-CSP", $policy);
-
 $response->send();
 $kernel->terminate($request, $response);
