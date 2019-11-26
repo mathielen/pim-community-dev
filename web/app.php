@@ -29,5 +29,11 @@ if (!empty($loadBalancerTrustedIPs)) {
 }
 
 $response = $kernel->handle($request);
+
+$policy = "default-src 'self' *.akeneo.com 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'nonce-2726c7f26c'";
+$response->headers->set("Content-Security-Policy-Report-Only", $policy);
+$response->headers->set("X-Content-Security-Policy-Report-Only", $policy);
+$response->headers->set("X-WebKit-CSP-Report-Only", $policy);
+
 $response->send();
 $kernel->terminate($request, $response);
