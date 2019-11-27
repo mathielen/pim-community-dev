@@ -12,6 +12,7 @@ pim_apps:
         code: Code
         label: Label
         flow_type: Flow type
+        image: Image
     flow_type:
         data_source: Data source | Data sources
         data_destination: Data destination | Data destinations
@@ -25,6 +26,10 @@ pim_apps:
         message: Wondering what flow type is?
         link: We can help you right here!
         link_url: https://www.akeneo.com/
+    image_helper:
+        upload: Change your image, drag and drop or
+        click_here: click here
+        remove: Remove the image
     app_count: '{{ count }} app | {{ count }} apps'
     no_app:
         title: No app declared yet.
