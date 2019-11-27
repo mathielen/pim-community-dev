@@ -5,6 +5,7 @@ import {Form, FormGroup, FormInput, Section} from '../../common';
 import {Translate} from '../../shared/translate';
 import {FormValues} from '../pages/AppEdit';
 import {FlowTypeHelper} from './FlowTypeHelper';
+import ImageUploader from './ImageUploader';
 import {FlowTypeSelect} from './FlowTypeSelect';
 
 interface Props {
@@ -43,6 +44,13 @@ export const AppEditForm = ({app, formik: {values, handleChange, setFieldValue, 
                     <FlowTypeSelect
                         value={values.flowType}
                         onChange={flowType => setFieldValue('flowType', flowType)}
+                    />
+                </FormGroup>
+
+                <FormGroup controlId='image' label='pim_apps.app.image'>
+                    <ImageUploader
+                        image={values.image}
+                        onChange={image => setFieldValue('image', image)}
                     />
                 </FormGroup>
             </Form>

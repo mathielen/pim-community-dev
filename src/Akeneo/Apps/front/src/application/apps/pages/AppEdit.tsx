@@ -5,25 +5,28 @@ import {App} from '../../../domain/apps/app.interface';
 import {FlowType} from '../../../domain/apps/flow-type.enum';
 import {PimView} from '../../../infrastructure/pim-view/PimView';
 import {ApplyButton, Breadcrumb, BreadcrumbItem, Page, PageHeader} from '../../common';
-import imgUrl from '../../common/assets/illustrations/api.svg';
+import defaultImageUrl from '../../common/assets/illustrations/api.svg';
 import {isErr, isOk} from '../../shared/fetch/result';
 import {BreadcrumbRouterLink} from '../../shared/router';
 import {Translate} from '../../shared/translate';
 import {AppEditForm} from '../components/AppEditForm';
 import {useFetchApp} from '../use-fetch-app';
 import {useUpdateApp} from '../use-update-app';
+import {useMediaUrlGenerator} from '../use-media-url-generator';
 
 export interface FormValues {
     label: string;
     flowType: FlowType;
+    image: string|null;
 }
 
 export interface FormErrors {
     label?: string;
     flowType?: string;
+    image?: string;
 }
 
-const initialValues: FormValues = {label: '', flowType: FlowType.OTHER};
+const initialValues: FormValues = {label: '', flowType: FlowType.OTHER, image: null};
 
 const validate = ({label}: FormValues): FormErrors => {
     const errors: FormErrors = {};
@@ -36,18 +39,20 @@ const validate = ({label}: FormValues): FormErrors => {
 
 export const AppEdit = () => {
     const history = useHistory();
+    const generateMediaUrl = useMediaUrlGenerator();
 
     const {code} = useParams<{code: string}>();
 
     const updateApp = useUpdateApp(code);
     const handleSubmit = async (
-        {label, flowType}: FormValues,
+        {label, flowType, image}: FormValues,
         {setSubmitting, resetForm}: FormikHelpers<FormValues>
     ) => {
         const result = await updateApp({
             code,
             label,
             flowType,
+            image,
         });
         setSubmitting(false);
 
@@ -56,6 +61,7 @@ export const AppEdit = () => {
                 values: {
                     label: label,
                     flowType: flowType,
+                    image: image,
                 },
             });
         }
@@ -76,6 +82,7 @@ export const AppEdit = () => {
                 values: {
                     label: app.label,
                     flowType: app.flowType,
+                    image: app.image,
                 },
             });
         }
@@ -129,7 +136,10 @@ export const AppEdit = () => {
                         </div>
                     )
                 }
-                imageSrc={imgUrl}
+                imageSrc={null === formik.values.image ?
+                  defaultImageUrl :
+                  generateMediaUrl(formik.values.image, 'thumbnail')
+                }
             >
                 {app.label}
             </PageHeader>

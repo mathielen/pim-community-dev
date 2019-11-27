@@ -3,7 +3,7 @@ import {useHistory} from 'react-router';
 import {App as AppInterface} from '../../../domain/apps/app.interface';
 import {FlowType} from '../../../domain/apps/flow-type.enum';
 import {PimView} from '../../../infrastructure/pim-view/PimView';
-import {NoApp} from '../../apps/components/NoApp';
+import {NoApp} from '../components/NoApp';
 import {ApplyButton, Breadcrumb, BreadcrumbItem, Helper, HelperLink, HelperTitle, Page, PageHeader} from '../../common';
 import {isOk} from '../../shared/fetch/result';
 import {BreadcrumbRouterLink, useRoute} from '../../shared/router';

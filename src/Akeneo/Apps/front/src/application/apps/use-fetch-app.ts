@@ -9,6 +9,7 @@ export const useFetchApp = (code: string) => {
         code: string;
         label: string;
         flow_type: FlowType;
+        image: string|null;
     }>(useRoute('akeneo_apps_get_rest', {code}));
 
     return useMemo(() => {
@@ -17,6 +18,7 @@ export const useFetchApp = (code: string) => {
                 code: result.data.code,
                 label: result.data.label,
                 flowType: result.data.flow_type,
+                image: result.data.image,
             });
         }
 
