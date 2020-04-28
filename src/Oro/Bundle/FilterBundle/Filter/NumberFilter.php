@@ -50,7 +50,7 @@ class NumberFilter extends AbstractFilter
             return false;
         }
 
-        $data['type'] = isset($data['type']) ? $data['type'] : null;
+        $data['type'] = $data['type'] ?? null;
 
         return $data;
     }
@@ -72,7 +72,7 @@ class NumberFilter extends AbstractFilter
             NumberFilterType::TYPE_LESS_THAN     => Operators::LOWER_THAN,
         ];
 
-        return isset($operatorTypes[$type]) ? $operatorTypes[$type] : '=';
+        return $operatorTypes[$type] ?? '=';
     }
 
     /**

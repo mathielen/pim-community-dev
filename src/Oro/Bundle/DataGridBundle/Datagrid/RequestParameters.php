@@ -6,8 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 class RequestParameters
 {
-    const ADDITIONAL_PARAMETERS = '_parameters';
-    const DEFAULT_ROOT_PARAM = 'grid';
+    public const ADDITIONAL_PARAMETERS = '_parameters';
+    public const DEFAULT_ROOT_PARAM = 'grid';
 
     /** @var string */
     protected $rootParam;
@@ -27,7 +27,7 @@ class RequestParameters
     {
         $rootParameter = $this->getRootParameterValue();
 
-        return isset($rootParameter[$type]) ? $rootParameter[$type] : $default;
+        return $rootParameter[$type] ?? $default;
     }
 
     /**

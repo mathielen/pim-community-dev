@@ -9,8 +9,8 @@ use Symfony\Component\Form\FormInterface;
 
 class ConfigManager
 {
-    const SECTION_VIEW_SEPARATOR = '___';
-    const SECTION_MODEL_SEPARATOR = '.';
+    public const SECTION_VIEW_SEPARATOR = '___';
+    public const SECTION_MODEL_SEPARATOR = '.';
 
     /**
      * @var ObjectManager

@@ -6,7 +6,7 @@ use Oro\Bundle\NavigationBundle\Annotation\TitleTemplate;
 
 class TitleTemplateTest extends \PHPUnit_Framework_TestCase
 {
-    const TEST_VALUE = 'test annotation value';
+    public const TEST_VALUE = 'test annotation value';
 
     /**
      * Test good annotation

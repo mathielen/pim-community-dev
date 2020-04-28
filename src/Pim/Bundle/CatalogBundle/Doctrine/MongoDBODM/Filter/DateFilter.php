@@ -19,7 +19,7 @@ use Pim\Component\Catalog\Validator\AttributeValidatorHelper;
  */
 class DateFilter extends AbstractAttributeFilter implements AttributeFilterInterface
 {
-    const DATETIME_FORMAT = 'Y-m-d';
+    public const DATETIME_FORMAT = 'Y-m-d';
 
     /**
      * @param AttributeValidatorHelper $attrValidatorHelper

@@ -37,8 +37,7 @@ class FamilyTransformer
                 if (isset($result[$attributeCode])) {
                     $attributeAsLabel = $result[$attributeCode];
                     $backendType = $attributeAsLabel['attribute']['backendType'];
-                    $result['productLabel'] = isset($attributeAsLabel[$backendType]) ?
-                        $attributeAsLabel[$backendType] : null;
+                    $result['productLabel'] = $attributeAsLabel[$backendType] ?? null;
                 } else {
                     $result['productLabel'] = null;
                 }

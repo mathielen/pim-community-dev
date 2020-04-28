@@ -24,10 +24,10 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 class UserContext
 {
     /** @staticvar string */
-    const REQUEST_LOCALE_PARAM = 'dataLocale';
+    public const REQUEST_LOCALE_PARAM = 'dataLocale';
 
     /** @staticvar string */
-    const USER_PRODUCT_CATEGORY_TYPE = 'product';
+    public const USER_PRODUCT_CATEGORY_TYPE = 'product';
 
     /** @var TokenStorageInterface */
     protected $tokenStorage;

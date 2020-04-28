@@ -22,7 +22,7 @@ class ProductValueChannelFilter extends AbstractFilter implements CollectionFilt
             throw new \LogicException('This filter only handles objects of type "ProductValueInterface"');
         }
 
-        $channelCodes = isset($options['channels']) ? $options['channels'] : [];
+        $channelCodes = $options['channels'] ?? [];
         $attribute = $productValue->getAttribute();
 
         return !empty($channelCodes) &&

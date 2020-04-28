@@ -12,7 +12,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class BuilderChainProvider implements MenuProviderInterface
 {
-    const COMMON_BUILDER_ALIAS = '_common_builder';
+    public const COMMON_BUILDER_ALIAS = '_common_builder';
 
     /**
      * Collection of builders grouped by alias.

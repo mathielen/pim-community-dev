@@ -15,30 +15,30 @@ interface PowerFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Power';
+    public const FAMILY = 'Power';
 
     /**
      * @staticvar string
      */
-    const GIGAWATT = 'GIGAWATT';
+    public const GIGAWATT = 'GIGAWATT';
 
     /**
      * @staticvar string
      */
-    const KILOWATT = 'KILOWATT';
+    public const KILOWATT = 'KILOWATT';
 
     /**
      * @staticvar string
      */
-    const MEGAWATT = 'MEGAWATT';
+    public const MEGAWATT = 'MEGAWATT';
 
     /**
      * @staticvar string
      */
-    const TERAWATT = 'TERAWATT';
+    public const TERAWATT = 'TERAWATT';
 
     /**
      * @staticvar string
      */
-    const WATT = 'WATT';
+    public const WATT = 'WATT';
 }

@@ -17,19 +17,19 @@ use Symfony\Component\DependencyInjection\Reference;
 class ResolverPass implements CompilerPassInterface
 {
     /** @staticvar string */
-    const PAGER_RESOLVER_ID = 'pim_datagrid.extension.pager.pager_resolver';
+    public const PAGER_RESOLVER_ID = 'pim_datagrid.extension.pager.pager_resolver';
 
     /** @staticvar string */
-    const MONGO_PAGER_ID = 'pim_datagrid.extension.pager.mongodb.pager';
+    public const MONGO_PAGER_ID = 'pim_datagrid.extension.pager.mongodb.pager';
 
     /** @staticvar string */
-    const DATASOURCE_ADAPTER_RESOLVER_ID = 'pim_datagrid.datasource.adapter_resolver';
+    public const DATASOURCE_ADAPTER_RESOLVER_ID = 'pim_datagrid.datasource.adapter_resolver';
 
     /** @staticvar string */
-    const MONGO_DATASOURCE_ADAPTER_CLASS = 'pim_filter.datasource.mongodb_adapter.class';
+    public const MONGO_DATASOURCE_ADAPTER_CLASS = 'pim_filter.datasource.mongodb_adapter.class';
 
     /** @staticvar string */
-    const MONGO_PRODUCT_DATASOURCE_ADAPTER_CLASS = 'pim_filter.datasource.product_mongodb_adapter.class';
+    public const MONGO_PRODUCT_DATASOURCE_ADAPTER_CLASS = 'pim_filter.datasource.product_mongodb_adapter.class';
 
     /**
      * {@inheritdoc}

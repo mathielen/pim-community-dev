@@ -25,7 +25,7 @@ class FieldsTransformer
         $dateTransformer = new DateTimeTransformer();
         $result['created'] = isset($result['created']) ? $dateTransformer->transform($result['created']) : null;
         $result['updated'] = isset($result['updated']) ? $dateTransformer->transform($result['updated']) : null;
-        $result['enabled'] = isset($result['enabled']) ? $result['enabled'] : false;
+        $result['enabled'] = $result['enabled'] ?? false;
 
         return $result;
     }

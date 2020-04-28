@@ -10,9 +10,9 @@ use Symfony\Component\Process\Process;
 
 class OroBuildCommand extends ContainerAwareCommand
 {
-    const MAIN_CONFIG_FILE_NAME = 'js/require-config.js';
-    const BUILD_CONFIG_FILE_NAME = 'build.js';
-    const OPTIMIZER_FILE_PATH = 'bundles/ororequirejs/lib/r.js';
+    public const MAIN_CONFIG_FILE_NAME = 'js/require-config.js';
+    public const BUILD_CONFIG_FILE_NAME = 'build.js';
+    public const OPTIMIZER_FILE_PATH = 'bundles/ororequirejs/lib/r.js';
 
     /**
      * {@inheritdoc}

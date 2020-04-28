@@ -9,7 +9,7 @@ class RenderHeaderExtensionTest extends AbstractExtensionTestCase
     /**
      * Testing class name
      */
-    const TESTING_CLASS = 'Oro\Bundle\FilterBundle\Twig\RenderHeaderExtension';
+    public const TESTING_CLASS = 'Oro\Bundle\FilterBundle\Twig\RenderHeaderExtension';
 
     /**
      * @var RenderHeaderExtension

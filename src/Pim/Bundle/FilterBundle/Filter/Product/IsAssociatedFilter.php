@@ -80,7 +80,7 @@ class IsAssociatedFilter extends BooleanFilter
     protected function getAssociationType()
     {
         $params = $this->extractor->getDatagridParameter(RequestParameters::ADDITIONAL_PARAMETERS, []);
-        $associationTypeId = isset($params['associationType']) ? $params['associationType'] : null;
+        $associationTypeId = $params['associationType'] ?? null;
 
         if (!$associationTypeId) {
             $associationTypeId = $this->extractor->getDatagridParameter('associationType');

@@ -14,11 +14,11 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
  */
 class AttributeNormalizer implements NormalizerInterface
 {
-    const ITEM_SEPARATOR = ',';
-    const LOCALIZABLE_PATTERN = '{locale}:{value}';
-    const GROUP_SEPARATOR = '|';
-    const GLOBAL_SCOPE = 'Global';
-    const CHANNEL_SCOPE = 'Channel';
+    public const ITEM_SEPARATOR = ',';
+    public const LOCALIZABLE_PATTERN = '{locale}:{value}';
+    public const GROUP_SEPARATOR = '|';
+    public const GLOBAL_SCOPE = 'Global';
+    public const CHANNEL_SCOPE = 'Channel';
 
     /** @var string[] */
     protected $supportedFormats = ['flat'];

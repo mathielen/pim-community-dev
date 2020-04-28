@@ -15,60 +15,60 @@ interface WeightFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Weight';
+    public const FAMILY = 'Weight';
 
     /**
      * @staticvar string
      */
-    const DENIER = 'DENIER';
+    public const DENIER = 'DENIER';
 
     /**
      * @staticvar string
      */
-    const GRAIN = 'GRAIN';
+    public const GRAIN = 'GRAIN';
 
     /**
      * @staticvar string
      */
-    const GRAM = 'GRAM';
+    public const GRAM = 'GRAM';
 
     /**
      * @staticvar string
      */
-    const KILOGRAM = 'KILOGRAM';
+    public const KILOGRAM = 'KILOGRAM';
 
     /**
      * @staticvar string
      */
-    const LIVRE = 'LIVRE';
+    public const LIVRE = 'LIVRE';
 
     /**
      * @staticvar string
      */
-    const MARC = 'MARC';
+    public const MARC = 'MARC';
 
     /**
      * @staticvar string
      */
-    const MILLIGRAM = 'MILLIGRAM';
+    public const MILLIGRAM = 'MILLIGRAM';
 
     /**
      * @staticvar string
      */
-    const ONCE = 'ONCE';
+    public const ONCE = 'ONCE';
 
     /**
      * @staticvar string
      */
-    const OUNCE = 'OUNCE';
+    public const OUNCE = 'OUNCE';
 
     /**
      * @staticvar string
      */
-    const POUND = 'POUND';
+    public const POUND = 'POUND';
 
     /**
      * @staticvar string
      */
-    const TON = 'TON';
+    public const TON = 'TON';
 }

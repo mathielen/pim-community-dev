@@ -6,7 +6,7 @@ use Oro\Bundle\NavigationBundle\Provider\TitleServiceInterface;
 
 class TitleExtension extends \Twig_Extension
 {
-    const EXT_NAME = 'oro_title';
+    public const EXT_NAME = 'oro_title';
 
     /**
      * @var TitleServiceInterface

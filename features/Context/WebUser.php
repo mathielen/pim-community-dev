@@ -887,7 +887,8 @@ class WebUser extends RawMinkContext
             throw $this->createExpectationException(
                 sprintf(
                     'Order of choices for field "%s" is not as expected, got: %s',
-                    $fieldName, implode(', ', $fieldsArray)
+                    $fieldName,
+                    implode(', ', $fieldsArray)
                 )
             );
         }

@@ -26,8 +26,8 @@ class AclYamlConfigLoader extends AbstractLoader implements AclAnnotationLoaderI
                         foreach ($data['bindings'] as $binding) {
                             $storage->addBinding(
                                 $id,
-                                isset($binding['class']) ? $binding['class'] : null,
-                                isset($binding['method']) ? $binding['method'] : null
+                                $binding['class'] ?? null,
+                                $binding['method'] ?? null
                             );
                         }
                     }

@@ -19,5 +19,5 @@ final class AttributeGroupEvents
      *
      * @staticvar string
      */
-    const POST_CREATE = 'pim_enrich.attribute_group.post_create';
+    public const POST_CREATE = 'pim_enrich.attribute_group.post_create';
 }

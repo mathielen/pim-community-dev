@@ -19,7 +19,7 @@ use Pim\Component\Catalog\Query\Filter\Operators;
  */
 class DateTimeFilter extends AbstractFieldFilter implements FieldFilterInterface
 {
-    const DATETIME_FORMAT = 'Y-m-d H:i:s';
+    public const DATETIME_FORMAT = 'Y-m-d H:i:s';
 
     /** @var JobRepositoryInterface */
     protected $jobRepository;

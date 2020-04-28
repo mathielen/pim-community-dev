@@ -11,7 +11,7 @@ use Oro\Bundle\NavigationBundle\Entity\NavigationHistoryItem;
  */
 class HistoryItemRepository extends EntityRepository implements NavigationRepositoryInterface
 {
-    const DEFAULT_SORT_ORDER = 'DESC';
+    public const DEFAULT_SORT_ORDER = 'DESC';
 
     /**
      * Find all history items for specified user
@@ -57,7 +57,7 @@ class HistoryItemRepository extends EntityRepository implements NavigationReposi
             if (isset($order['field']) && in_array($order['field'], $fields)) {
                 $qb->addOrderBy(
                     'ni.' . $order['field'],
-                    isset($order['dir']) ? $order['dir'] : self::DEFAULT_SORT_ORDER
+                    $order['dir'] ?? self::DEFAULT_SORT_ORDER
                 );
             }
         }

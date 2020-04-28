@@ -15,75 +15,75 @@ interface LengthFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Length';
+    public const FAMILY = 'Length';
 
     /**
      * @staticvar string
      */
-    const CENTIMETER = 'CENTIMETER';
+    public const CENTIMETER = 'CENTIMETER';
 
     /**
      * @staticvar string
      */
-    const CHAIN = 'CHAIN';
+    public const CHAIN = 'CHAIN';
 
     /**
      * @staticvar string
      */
-    const DECIMETER = 'DECIMETER';
+    public const DECIMETER = 'DECIMETER';
 
     /**
      * @staticvar string
      */
-    const DEKAMETER = 'DEKAMETER';
+    public const DEKAMETER = 'DEKAMETER';
 
     /**
      * @staticvar string
      */
-    const FEET = 'FEET';
+    public const FEET = 'FEET';
 
     /**
      * @staticvar string
      */
-    const FURLONG = 'FURLONG';
+    public const FURLONG = 'FURLONG';
 
     /**
      * @staticvar string
      */
-    const HECTOMETER = 'HECTOMETER';
+    public const HECTOMETER = 'HECTOMETER';
 
     /**
      * @staticvar string
      */
-    const INCH = 'INCH';
+    public const INCH = 'INCH';
 
     /**
      * @staticvar string
      */
-    const KILOMETER = 'KILOMETER';
+    public const KILOMETER = 'KILOMETER';
 
     /**
      * @staticvar string
      */
-    const METER = 'METER';
+    public const METER = 'METER';
 
     /**
      * @staticvar string
      */
-    const MIL = 'MIL';
+    public const MIL = 'MIL';
 
     /**
      * @staticvar string
      */
-    const MILE = 'MILE';
+    public const MILE = 'MILE';
 
     /**
      * @staticvar string
      */
-    const MILLIMETER = 'MILLIMETER';
+    public const MILLIMETER = 'MILLIMETER';
 
     /**
      * @staticvar string
      */
-    const YARD = 'YARD';
+    public const YARD = 'YARD';
 }

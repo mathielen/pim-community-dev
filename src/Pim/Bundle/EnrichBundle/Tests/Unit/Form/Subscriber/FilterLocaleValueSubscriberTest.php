@@ -13,9 +13,9 @@ use Pim\Bundle\EnrichBundle\Form\Subscriber\FilterLocaleValueSubscriber;
  */
 class FilterLocaleValueSubscriberTest extends \PHPUnit_Framework_TestCase
 {
-    const CURRENT_LOCALE = 'fr_FR';
-    const COMPARISON_LOCALE = 'fr_BE';
-    const OTHER_LOCALE = 'en_US';
+    public const CURRENT_LOCALE = 'fr_FR';
+    public const COMPARISON_LOCALE = 'fr_BE';
+    public const OTHER_LOCALE = 'en_US';
 
     /**
      * {@inheritdoc}

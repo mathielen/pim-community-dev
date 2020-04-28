@@ -16,11 +16,11 @@ use Symfony\Component\DependencyInjection\Reference;
 class RegisterRendererPass implements CompilerPassInterface
 {
     /** @var string */
-    const REGISTRY_ID = 'pim_pdf_generator.renderer.registry';
+    public const REGISTRY_ID = 'pim_pdf_generator.renderer.registry';
     /** @var string */
-    const RENDERER_TAG = 'pim_pdf_generator.renderer';
+    public const RENDERER_TAG = 'pim_pdf_generator.renderer';
     /** @var int */
-    const DEFAULT_PRIORITY = 100;
+    public const DEFAULT_PRIORITY = 100;
 
     /**
      * {@inheritdoc}
@@ -53,7 +53,7 @@ class RegisterRendererPass implements CompilerPassInterface
     {
         $priorities = [];
         foreach ($container->findTaggedServiceIds(static::RENDERER_TAG) as $serviceId => $tags) {
-            $priority = isset($tags[0]['priority']) ? $tags[0]['priority'] : self::DEFAULT_PRIORITY;
+            $priority = $tags[0]['priority'] ?? self::DEFAULT_PRIORITY;
             if (!isset($priorities[$priority])) {
                 $priorities[$priority] = [];
             }

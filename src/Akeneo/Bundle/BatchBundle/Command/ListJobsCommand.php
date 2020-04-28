@@ -19,7 +19,7 @@ class ListJobsCommand extends ContainerAwareCommand
     /**
      * @staticvar string Option used to list all jobs
      */
-    const LIST_ALL = 'all';
+    public const LIST_ALL = 'all';
 
     /**
      * {@inheritdoc}

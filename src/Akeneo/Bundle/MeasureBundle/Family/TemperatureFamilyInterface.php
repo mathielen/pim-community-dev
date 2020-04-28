@@ -15,30 +15,30 @@ interface TemperatureFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Temperature';
+    public const FAMILY = 'Temperature';
 
     /**
      * @staticvar string
      */
-    const CELSIUS = 'CELSIUS';
+    public const CELSIUS = 'CELSIUS';
 
     /**
      * @staticvar string
      */
-    const FAHRENHEIT = 'FAHRENHEIT';
+    public const FAHRENHEIT = 'FAHRENHEIT';
 
     /**
      * @staticvar string
      */
-    const KELVIN = 'KELVIN';
+    public const KELVIN = 'KELVIN';
 
     /**
      * @staticvar string
      */
-    const RANKINE = 'RANKINE';
+    public const RANKINE = 'RANKINE';
 
     /**
      * @staticvar string
      */
-    const REAUMUR = 'REAUMUR';
+    public const REAUMUR = 'REAUMUR';
 }

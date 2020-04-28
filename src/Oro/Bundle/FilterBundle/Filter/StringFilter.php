@@ -51,7 +51,7 @@ class StringFilter extends AbstractFilter
             return false;
         }
 
-        $data['type'] = isset($data['type']) ? $data['type'] : null;
+        $data['type'] = $data['type'] ?? null;
 
         if (null !== $data['type'] && $data['type'] !== TextFilterType::TYPE_EQUAL) {
             $data['value'] = str_replace(['%', '_'], ['\\%', '\\_'], $data['value']);
@@ -81,7 +81,7 @@ class StringFilter extends AbstractFilter
             FilterType::TYPE_IN_LIST          => Operators::IN_LIST,
         ];
 
-        return isset($operatorTypes[$type]) ? $operatorTypes[$type] : 'LIKE';
+        return $operatorTypes[$type] ?? 'LIKE';
     }
 
     /**

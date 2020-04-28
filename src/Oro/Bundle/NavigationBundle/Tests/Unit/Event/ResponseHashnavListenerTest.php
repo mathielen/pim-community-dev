@@ -7,8 +7,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ResponseHashnavListenerTest extends \PHPUnit_Framework_TestCase
 {
-    const TEST_URL = 'http://test_url/';
-    const TEMPLATE = 'OroNavigationBundle:HashNav:redirect.html.twig';
+    public const TEST_URL = 'http://test_url/';
+    public const TEMPLATE = 'OroNavigationBundle:HashNav:redirect.html.twig';
 
     /**
      * @var \Oro\Bundle\NavigationBundle\Event\ResponseHashnavListener

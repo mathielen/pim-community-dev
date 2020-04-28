@@ -89,8 +89,8 @@ class ImportExportContext extends PimContext
      */
     protected function getExpectedLines(PyStringNode $behatData, $config)
     {
-        $delimiter = isset($config['delimiter']) ? $config['delimiter'] : ';';
-        $enclosure = isset($config['enclosure']) ? $config['enclosure'] : '';
+        $delimiter = $config['delimiter'] ?? ';';
+        $enclosure = $config['enclosure'] ?? '';
 
         $expectedLines = [];
         foreach ($behatData->getLines() as $line) {
@@ -136,9 +136,9 @@ class ImportExportContext extends PimContext
     protected function getCsvJobConfiguration($code)
     {
         $config = $this->getFixturesContext()->getJobInstance($code)->getRawParameters();
-        $config['delimiter'] = isset($config['delimiter']) ? $config['delimiter'] : ';';
-        $config['enclosure'] = isset($config['enclosure']) ? $config['enclosure'] : '"';
-        $config['escape'] = isset($config['escape']) ? $config['escape'] : '\\';
+        $config['delimiter'] = $config['delimiter'] ?? ';';
+        $config['enclosure'] = $config['enclosure'] ?? '"';
+        $config['escape'] = $config['escape'] ?? '\\';
 
         return $config;
     }

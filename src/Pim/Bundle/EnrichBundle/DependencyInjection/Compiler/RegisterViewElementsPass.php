@@ -17,13 +17,13 @@ use Symfony\Component\DependencyInjection\Definition;
 class RegisterViewElementsPass implements CompilerPassInterface
 {
     /** @staticvar int The default view element position */
-    const DEFAULT_POSITION = 100;
+    public const DEFAULT_POSITION = 100;
 
     /** @staticvar string The registry id */
-    const REGISTRY_ID = 'pim_enrich.view_element.registry';
+    public const REGISTRY_ID = 'pim_enrich.view_element.registry';
 
     /** @staticvar string */
-    const VIEW_ELEMENT_TAG = 'pim_enrich.view_element';
+    public const VIEW_ELEMENT_TAG = 'pim_enrich.view_element';
 
     /** @var ReferenceFactory */
     protected $factory;
@@ -66,7 +66,7 @@ class RegisterViewElementsPass implements CompilerPassInterface
         if (!isset($tag['type'])) {
             throw new \LogicException(sprintf('No type provided for the "%s" view element', $serviceId));
         }
-        $position = isset($tag['position']) ? $tag['position'] : static::DEFAULT_POSITION;
+        $position = $tag['position'] ?? static::DEFAULT_POSITION;
         $registryDefinition->addMethodCall(
             'add',
             [

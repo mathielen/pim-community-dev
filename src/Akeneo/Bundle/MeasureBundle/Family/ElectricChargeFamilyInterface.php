@@ -15,55 +15,55 @@ interface ElectricChargeFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'ElectricCharge';
+    public const FAMILY = 'ElectricCharge';
     
     /**
      * @staticvar string
      */
-    const AMPEREHOUR = 'AMPEREHOUR';
+    public const AMPEREHOUR = 'AMPEREHOUR';
 
     /**
      * @staticvar string
      */
-    const MILLIAMPEREHOUR = 'MILLIAMPEREHOUR';
+    public const MILLIAMPEREHOUR = 'MILLIAMPEREHOUR';
 
     /**
      * @staticvar string
      */
-    const MILLICOULOMB = 'MILLICOULOMB';
+    public const MILLICOULOMB = 'MILLICOULOMB';
 
     /**
      * @staticvar string
      */
-    const CENTICOULOMB = 'CENTICOULOMB';
+    public const CENTICOULOMB = 'CENTICOULOMB';
 
     /**
      * @staticvar string
      */
-    const DECICOULOMB = 'DECICOULOMB';
+    public const DECICOULOMB = 'DECICOULOMB';
 
     /**
      * @staticvar string
      */
-    const COULOMB = 'COULOMB';
+    public const COULOMB = 'COULOMB';
 
     /**
      * @staticvar string
      */
-    const DEKACOULOMB = 'DEKACOULOMB';
+    public const DEKACOULOMB = 'DEKACOULOMB';
 
     /**
      * @staticvar string
      */
-    const HECTOCOULOMB = 'HECTOCOULOMB';
+    public const HECTOCOULOMB = 'HECTOCOULOMB';
 
     /**
      * @staticvar string
      */
-    const KILOCOULOMB = 'KILOCOULOMB';
+    public const KILOCOULOMB = 'KILOCOULOMB';
 
     /**
      * @staticvar string
      */
-    const MEGACOULOMB = 'MEGACOULOMB';
+    public const MEGACOULOMB = 'MEGACOULOMB';
 }

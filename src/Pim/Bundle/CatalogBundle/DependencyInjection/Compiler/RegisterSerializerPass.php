@@ -21,7 +21,7 @@ class RegisterSerializerPass implements CompilerPassInterface
     protected $serializerServiceId;
 
     /** @staticvar integer The default priority for services */
-    const DEFAULT_PRIORITY = 100;
+    public const DEFAULT_PRIORITY = 100;
 
     /**
      * @param string $serializerServiceId
@@ -74,7 +74,7 @@ class RegisterSerializerPass implements CompilerPassInterface
         $sortedServices = [];
         foreach ($services as $serviceId => $tags) {
             foreach ($tags as $tag) {
-                $priority = isset($tag['priority']) ? $tag['priority'] : self::DEFAULT_PRIORITY;
+                $priority = $tag['priority'] ?? self::DEFAULT_PRIORITY;
                 $sortedServices[$priority][] = new Reference($serviceId);
             }
         }

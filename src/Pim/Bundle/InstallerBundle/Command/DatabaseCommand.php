@@ -29,8 +29,8 @@ class DatabaseCommand extends ContainerAwareCommand
     /**
      * @staticvar string
      */
-    const LOAD_ALL = 'all';
-    const LOAD_BASE = 'base';
+    public const LOAD_ALL = 'all';
+    public const LOAD_BASE = 'base';
 
     /** @var CommandExecutor */
     protected $commandExecutor;

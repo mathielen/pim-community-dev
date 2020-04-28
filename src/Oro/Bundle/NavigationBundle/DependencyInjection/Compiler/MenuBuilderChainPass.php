@@ -7,10 +7,10 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class MenuBuilderChainPass implements CompilerPassInterface
 {
-    const MENU_BUILDER_TAG = 'oro_menu.builder';
-    const MENU_PROVIDER_KEY = 'oro_menu.builder_chain';
-    const ITEMS_BUILDER_TAG = 'oro_navigation.item.builder';
-    const ITEMS_PROVIDER_KEY = 'oro_navigation.item.factory';
+    public const MENU_BUILDER_TAG = 'oro_menu.builder';
+    public const MENU_PROVIDER_KEY = 'oro_menu.builder_chain';
+    public const ITEMS_BUILDER_TAG = 'oro_navigation.item.builder';
+    public const ITEMS_PROVIDER_KEY = 'oro_navigation.item.factory';
 
     public function process(ContainerBuilder $container)
     {

@@ -22,7 +22,7 @@ class ProductValueLocaleFilter extends AbstractFilter implements CollectionFilte
             throw new \LogicException('This filter only handles objects of type "ProductValueInterface"');
         }
 
-        $localeCodes = isset($options['locales']) ? $options['locales'] : [];
+        $localeCodes = $options['locales'] ?? [];
         $attribute = $productValue->getAttribute();
 
         return !empty($localeCodes) &&

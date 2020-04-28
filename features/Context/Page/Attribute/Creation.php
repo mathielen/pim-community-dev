@@ -223,9 +223,9 @@ class Creation extends Form
     {
         foreach ($this->getOptionsElement() as $optionRow) {
             if ((
-                    $optionRow->find('css', '.attribute_option_code') &&
+                $optionRow->find('css', '.attribute_option_code') &&
                     $optionRow->find('css', '.attribute_option_code')->getValue() === $optionName
-                ) ||
+            ) ||
                 (
                     $optionRow->find('css', '.option-code') &&
                     $optionRow->find('css', '.option-code')->getText() === $optionName

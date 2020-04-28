@@ -29,7 +29,7 @@ use Symfony\Component\Translation\TranslatorInterface;
  */
 class JobExecutionController
 {
-    const BLOCK_SIZE = 8192;
+    public const BLOCK_SIZE = 8192;
 
     /** @var Request */
     protected $request;

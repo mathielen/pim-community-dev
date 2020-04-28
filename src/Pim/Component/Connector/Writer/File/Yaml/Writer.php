@@ -20,7 +20,7 @@ class Writer extends AbstractFileWriter implements
     ItemWriterInterface,
     StepExecutionAwareInterface
 {
-    const INLINE_ARRAY_LEVEL = 8;
+    public const INLINE_ARRAY_LEVEL = 8;
 
     /** @var ArrayConverterInterface */
     protected $arrayConverter;

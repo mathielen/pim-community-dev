@@ -22,10 +22,10 @@ use Pim\Component\Catalog\Model\ProductInterface;
 class CompletenessGenerator implements CompletenessGeneratorInterface
 {
     /** @staticvar string */
-    const COMPLETE_PRICES_TABLE = 'complete_price';
+    public const COMPLETE_PRICES_TABLE = 'complete_price';
 
     /** @staticvar string */
-    const MISSING_TABLE = 'missing_completeness';
+    public const MISSING_TABLE = 'missing_completeness';
 
     /** @var Connection */
     protected $connection;
@@ -133,9 +133,9 @@ class CompletenessGenerator implements CompletenessGeneratorInterface
 
         $tempTableName = self::COMPLETE_PRICES_TABLE;
         $createSQL = <<<SQL
-    CREATE TEMPORARY TABLE {$tempTableName}
-    (locale_id int, channel_id int, value_id int, primary key(locale_id, channel_id, value_id))
-SQL;
+                CREATE TEMPORARY TABLE {$tempTableName}
+                (locale_id int, channel_id int, value_id int, primary key(locale_id, channel_id, value_id))
+            SQL;
 
         $createSQL = $this->applyTableNames($createSQL);
         $tempTableStmt = $this->connection->prepare($createSQL);
@@ -152,9 +152,9 @@ SQL;
         $fetchStmt->execute();
 
         $insertSql = <<<SQL
-    INSERT INTO {$tempTableName} (locale_id, channel_id, value_id) 
-    VALUES (:locale_id, :channel_id, :value_id)
-SQL;
+                INSERT INTO {$tempTableName} (locale_id, channel_id, value_id) 
+                VALUES (:locale_id, :channel_id, :value_id)
+            SQL;
         $insertStmt = $this->connection->prepare($insertSql);
         $count = 0;
 
@@ -199,8 +199,8 @@ SQL;
 
         $tempTableName = self::MISSING_TABLE;
         $createSql = <<<SQL
-    CREATE TEMPORARY TABLE {$tempTableName} (locale_id int, channel_id int, product_id int, primary key(product_id, locale_id, channel_id))
-SQL;
+                CREATE TEMPORARY TABLE {$tempTableName} (locale_id int, channel_id int, product_id int, primary key(product_id, locale_id, channel_id))
+            SQL;
 
         $createSql = $this->applyTableNames($createSql);
         $tempTableStmt = $this->connection->prepare($createSql);
@@ -217,9 +217,9 @@ SQL;
         $fetchStmt->execute();
 
         $insertSql = <<<SQL
-    INSERT INTO {$tempTableName} (locale_id, channel_id, product_id) 
-    VALUES (:locale_id, :channel_id, :product_id)
-SQL;
+                INSERT INTO {$tempTableName} (locale_id, channel_id, product_id) 
+                VALUES (:locale_id, :channel_id, :product_id)
+            SQL;
         $insertStmt = $this->connection->prepare($insertSql);
         $count = 0;
 
@@ -264,26 +264,26 @@ SQL;
     protected function getCompletePricesSQL()
     {
         return <<<COMPLETE_PRICES_SQL
-            (SELECT l.id AS locale_id, c.id AS channel_id, v.id AS value_id
-                FROM pim_catalog_attribute_requirement r
-                JOIN %attribute_table% att ON att.id = r.attribute_id AND att.backend_type = "prices"
-                JOIN pim_catalog_channel c ON c.id = r.channel_id %channel_conditions%
-                JOIN pim_catalog_channel_locale cl ON cl.channel_id = c.id
-                JOIN pim_catalog_locale l ON l.id = cl.locale_id
-                JOIN pim_catalog_channel_currency ccur ON ccur.channel_id = c.id
-                JOIN pim_catalog_currency cur ON cur.id = ccur.currency_id
-                JOIN %product_table% p ON p.family_id = r.family_id %product_conditions%
-                JOIN %product_value_table% v
-                    ON (v.scope_code = c.code OR v.scope_code IS NULL)
-                    AND (v.locale_code = l.code OR v.locale_code IS NULL)
-                    AND v.attribute_id = att.id
-                    AND v.entity_id = p.id
-                LEFT JOIN pim_catalog_product_value_price price
-                    ON price.value_id = v.id
-                    AND price.currency_code = cur.code
-                GROUP BY l.id, c.id, v.id
-                HAVING COUNT(price.data) = COUNT(ccur.currency_id))
-COMPLETE_PRICES_SQL;
+                        (SELECT l.id AS locale_id, c.id AS channel_id, v.id AS value_id
+                            FROM pim_catalog_attribute_requirement r
+                            JOIN %attribute_table% att ON att.id = r.attribute_id AND att.backend_type = "prices"
+                            JOIN pim_catalog_channel c ON c.id = r.channel_id %channel_conditions%
+                            JOIN pim_catalog_channel_locale cl ON cl.channel_id = c.id
+                            JOIN pim_catalog_locale l ON l.id = cl.locale_id
+                            JOIN pim_catalog_channel_currency ccur ON ccur.channel_id = c.id
+                            JOIN pim_catalog_currency cur ON cur.id = ccur.currency_id
+                            JOIN %product_table% p ON p.family_id = r.family_id %product_conditions%
+                            JOIN %product_value_table% v
+                                ON (v.scope_code = c.code OR v.scope_code IS NULL)
+                                AND (v.locale_code = l.code OR v.locale_code IS NULL)
+                                AND v.attribute_id = att.id
+                                AND v.entity_id = p.id
+                            LEFT JOIN pim_catalog_product_value_price price
+                                ON price.value_id = v.id
+                                AND price.currency_code = cur.code
+                            GROUP BY l.id, c.id, v.id
+                            HAVING COUNT(price.data) = COUNT(ccur.currency_id))
+            COMPLETE_PRICES_SQL;
     }
 
     /**
@@ -299,21 +299,21 @@ COMPLETE_PRICES_SQL;
     protected function getMissingCompletenessesSQL()
     {
         return <<<MISSING_SQL
-            (SELECT l.id AS locale_id, c.id AS channel_id, p.id AS product_id
-            FROM
-                (SELECT c.id, r.family_id
-                FROM pim_catalog_attribute_requirement r
-                JOIN pim_catalog_channel c ON c.id = r.channel_id %channel_conditions%
-                GROUP BY c.id, r.family_id) AS c
-            JOIN pim_catalog_channel_locale cl ON cl.channel_id = c.id
-            JOIN pim_catalog_locale l ON l.id = cl.locale_id
-            JOIN %product_table% p ON p.family_id = c.family_id %product_conditions%
-            LEFT JOIN pim_catalog_completeness co
-                ON co.product_id = p.id
-                AND co.channel_id = c.id
-                AND co.locale_id = l.id
-            WHERE co.id IS NULL)
-MISSING_SQL;
+                        (SELECT l.id AS locale_id, c.id AS channel_id, p.id AS product_id
+                        FROM
+                            (SELECT c.id, r.family_id
+                            FROM pim_catalog_attribute_requirement r
+                            JOIN pim_catalog_channel c ON c.id = r.channel_id %channel_conditions%
+                            GROUP BY c.id, r.family_id) AS c
+                        JOIN pim_catalog_channel_locale cl ON cl.channel_id = c.id
+                        JOIN pim_catalog_locale l ON l.id = cl.locale_id
+                        JOIN %product_table% p ON p.family_id = c.family_id %product_conditions%
+                        LEFT JOIN pim_catalog_completeness co
+                            ON co.product_id = p.id
+                            AND co.channel_id = c.id
+                            AND co.locale_id = l.id
+                        WHERE co.id IS NULL)
+            MISSING_SQL;
     }
 
     /**
@@ -363,9 +363,9 @@ MISSING_SQL;
         $fetchStmt->execute();
 
         $insertSql = <<<SQL
-    REPLACE pim_catalog_completeness (locale_id, channel_id, product_id, ratio, missing_count, required_count) 
-    VALUES (:locale_id, :channel_id, :product_id, :ratio, :missing_count, :required_count)
-SQL;
+                REPLACE pim_catalog_completeness (locale_id, channel_id, product_id, ratio, missing_count, required_count) 
+                VALUES (:locale_id, :channel_id, :product_id, :ratio, :missing_count, :required_count)
+            SQL;
         $insertStmt = $this->connection->prepare($insertSql);
         $count = 0;
 
@@ -407,62 +407,62 @@ SQL;
     protected function getMainSqlPart()
     {
         return <<<MAIN_SQL
-    SELECT
-        locale_id,
-        channel_id,
-        product_id,
-        (req_values_filled / required_count * 100) as ratio,
-        (required_count - req_values_filled) as missing_count,
-        required_count
-    FROM (
-        SELECT
-            values_filled.locale_id,
-            values_filled.channel_id,
-            values_filled.product_id,
-            values_filled.req_values_filled,
-            (
-                SELECT COUNT(*)
-                    FROM pim_catalog_attribute_requirement r
-                    LEFT JOIN pim_catalog_attribute_locale al ON al.attribute_id = r.attribute_id
-                    WHERE r.family_id = values_filled.family_id
-                        AND r.channel_id = values_filled.channel_id
-                        AND r.required = TRUE
-                        AND (al.locale_id = values_filled.locale_id OR al.locale_id IS NULL)
-            ) AS required_count
-        FROM (
-            SELECT
-                l.id AS locale_id,
-                c.id AS channel_id,
-                p.id AS product_id,
-                p.family_id AS family_id,
-                COUNT(DISTINCT v.id) AS req_values_filled
-            FROM %missing_completeness% AS m
-            JOIN pim_catalog_channel c ON c.id = m.channel_id
-            JOIN pim_catalog_locale l ON l.id = m.locale_id
-            JOIN %product_table% p ON p.id = m.product_id
-            JOIN pim_catalog_attribute_requirement r ON r.family_id = p.family_id AND r.channel_id = c.id
-            JOIN %product_value_table% v ON v.attribute_id = r.attribute_id
-                AND (v.scope_code = c.code OR v.scope_code IS NULL)
-                AND (v.locale_code = l.code OR v.locale_code IS NULL)
-                AND v.entity_id = p.id
-            %product_value_joins%
-            %extra_joins%
-            LEFT JOIN %complete_price% AS cp
-                ON cp.value_id = v.id
-                AND cp.channel_id = c.id
-                AND cp.locale_id = l.id
-            LEFT JOIN pim_catalog_attribute_locale al ON al.attribute_id = v.attribute_id
-            WHERE (
-                %product_value_conditions%
-                %extra_conditions%
-                OR cp.value_id IS NOT NULL
-            )
-            AND (al.locale_id = l.id OR al.locale_id IS NULL)
-            AND r.required = true
-            GROUP BY p.id, c.id, l.id
-        ) AS values_filled
-    ) AS results
-MAIN_SQL;
+                SELECT
+                    locale_id,
+                    channel_id,
+                    product_id,
+                    (req_values_filled / required_count * 100) as ratio,
+                    (required_count - req_values_filled) as missing_count,
+                    required_count
+                FROM (
+                    SELECT
+                        values_filled.locale_id,
+                        values_filled.channel_id,
+                        values_filled.product_id,
+                        values_filled.req_values_filled,
+                        (
+                            SELECT COUNT(*)
+                                FROM pim_catalog_attribute_requirement r
+                                LEFT JOIN pim_catalog_attribute_locale al ON al.attribute_id = r.attribute_id
+                                WHERE r.family_id = values_filled.family_id
+                                    AND r.channel_id = values_filled.channel_id
+                                    AND r.required = TRUE
+                                    AND (al.locale_id = values_filled.locale_id OR al.locale_id IS NULL)
+                        ) AS required_count
+                    FROM (
+                        SELECT
+                            l.id AS locale_id,
+                            c.id AS channel_id,
+                            p.id AS product_id,
+                            p.family_id AS family_id,
+                            COUNT(DISTINCT v.id) AS req_values_filled
+                        FROM %missing_completeness% AS m
+                        JOIN pim_catalog_channel c ON c.id = m.channel_id
+                        JOIN pim_catalog_locale l ON l.id = m.locale_id
+                        JOIN %product_table% p ON p.id = m.product_id
+                        JOIN pim_catalog_attribute_requirement r ON r.family_id = p.family_id AND r.channel_id = c.id
+                        JOIN %product_value_table% v ON v.attribute_id = r.attribute_id
+                            AND (v.scope_code = c.code OR v.scope_code IS NULL)
+                            AND (v.locale_code = l.code OR v.locale_code IS NULL)
+                            AND v.entity_id = p.id
+                        %product_value_joins%
+                        %extra_joins%
+                        LEFT JOIN %complete_price% AS cp
+                            ON cp.value_id = v.id
+                            AND cp.channel_id = c.id
+                            AND cp.locale_id = l.id
+                        LEFT JOIN pim_catalog_attribute_locale al ON al.attribute_id = v.attribute_id
+                        WHERE (
+                            %product_value_conditions%
+                            %extra_conditions%
+                            OR cp.value_id IS NOT NULL
+                        )
+                        AND (al.locale_id = l.id OR al.locale_id IS NULL)
+                        AND r.required = true
+                        GROUP BY p.id, c.id, l.id
+                    ) AS values_filled
+                ) AS results
+            MAIN_SQL;
     }
 
     /**
@@ -795,10 +795,10 @@ MAIN_SQL;
     public function scheduleForChannelAndLocale(ChannelInterface $channel, LocaleInterface $locale)
     {
         $sql = <<<SQL
-            DELETE c FROM pim_catalog_completeness c
-            WHERE c.channel_id = :channel_id
-            AND c.locale_id = :locale_id
-SQL;
+                        DELETE c FROM pim_catalog_completeness c
+                        WHERE c.channel_id = :channel_id
+                        AND c.locale_id = :locale_id
+            SQL;
 
         $sql = $this->applyTableNames($sql);
 

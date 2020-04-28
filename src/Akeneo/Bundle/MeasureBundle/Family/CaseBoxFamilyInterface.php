@@ -15,15 +15,15 @@ interface CaseBoxFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'CaseBox';
+    public const FAMILY = 'CaseBox';
 
     /**
      * @staticvar string
      */
-    const PIECE = 'PIECE';
+    public const PIECE = 'PIECE';
 
     /**
      * @staticvar string
      */
-    const DOZEN = 'DOZEN';
+    public const DOZEN = 'DOZEN';
 }

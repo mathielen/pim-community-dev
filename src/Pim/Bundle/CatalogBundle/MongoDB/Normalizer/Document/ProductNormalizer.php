@@ -18,16 +18,16 @@ use Symfony\Component\Serializer\SerializerInterface;
 class ProductNormalizer implements NormalizerInterface, SerializerAwareInterface
 {
     /** @staticvar string */
-    const FORMAT = 'mongodb_document';
+    public const FORMAT = 'mongodb_document';
 
     /** @staticvar string */
-    const MONGO_ID = '_id';
+    public const MONGO_ID = '_id';
 
     /** @staticvar string */
-    const MONGO_COLLECTION_NAME = 'collection_name';
+    public const MONGO_COLLECTION_NAME = 'collection_name';
 
     /** @staticvar string */
-    const MONGO_DATABASE_NAME = 'database_name';
+    public const MONGO_DATABASE_NAME = 'database_name';
 
     /** @var NormalizerInterface */
     protected $normalizer;

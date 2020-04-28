@@ -34,13 +34,13 @@ use Symfony\Component\Translation\TranslatorInterface;
  */
 class ProductController
 {
-    const BACK_TO_GRID = 'BackGrid';
+    public const BACK_TO_GRID = 'BackGrid';
 
-    const CREATE = 'Create';
+    public const CREATE = 'Create';
 
-    const SAVE_AND_NEXT = 'SaveAndNext';
+    public const SAVE_AND_NEXT = 'SaveAndNext';
 
-    const SAVE_AND_FINISH = 'SaveAndFinish';
+    public const SAVE_AND_FINISH = 'SaveAndFinish';
 
     /** @var RouterInterface */
     protected $router;

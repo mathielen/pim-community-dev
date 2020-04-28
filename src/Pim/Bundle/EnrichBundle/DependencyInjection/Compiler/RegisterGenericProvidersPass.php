@@ -16,13 +16,13 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 class RegisterGenericProvidersPass implements CompilerPassInterface
 {
     /** @staticvar int The default provider priority */
-    const DEFAULT_PRIORITY = 100;
+    public const DEFAULT_PRIORITY = 100;
 
     /** @staticvar string The registry id */
-    const REGISTRY_ID = 'pim_enrich.provider.%s.chained';
+    public const REGISTRY_ID = 'pim_enrich.provider.%s.chained';
 
     /** @staticvar string */
-    const PROVIDER_TAG = 'pim_enrich.provider.%s';
+    public const PROVIDER_TAG = 'pim_enrich.provider.%s';
 
     /** @var ReferenceFactory */
     protected $factory;
@@ -55,7 +55,7 @@ class RegisterGenericProvidersPass implements CompilerPassInterface
         foreach ($container->findTaggedServiceIds(sprintf(static::PROVIDER_TAG, $this->providerType)) as
             $serviceId => $tags) {
             foreach ($tags as $tag) {
-                $priority = isset($tag['priority']) ? $tag['priority'] : static::DEFAULT_PRIORITY;
+                $priority = $tag['priority'] ?? static::DEFAULT_PRIORITY;
                 if (!isset($providers[$priority])) {
                     $providers[$priority] = [];
                 }

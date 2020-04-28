@@ -36,7 +36,7 @@ class GroupsTransformer
             $groups = [];
             foreach ($normalizedData['groups'] as $group) {
                 $code = $group['code'];
-                $label = isset($group['labels'][$locale]) ? $group['labels'][$locale] : null;
+                $label = $group['labels'][$locale] ?? null;
                 $groups[$code] = ['code' => $code, 'label' => $label];
             }
             $result['groups'] = $groups;

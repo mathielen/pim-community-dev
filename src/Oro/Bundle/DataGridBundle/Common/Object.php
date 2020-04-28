@@ -9,7 +9,7 @@ use Symfony\Component\PropertyAccess\PropertyAccessor;
 
 class Object implements \ArrayAccess, \IteratorAggregate
 {
-    const NAME_KEY = 'name';
+    public const NAME_KEY = 'name';
 
     /** @var PropertyAccessor */
     protected $accessor;
@@ -125,7 +125,7 @@ class Object implements \ArrayAccess, \IteratorAggregate
      */
     public function offsetGetOr($offset, $default = null)
     {
-        return isset($this[$offset]) ? $this[$offset] : $default;
+        return $this[$offset] ?? $default;
     }
 
     /**

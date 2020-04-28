@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 
 class ResponseHashnavListener
 {
-    const HASH_NAVIGATION_HEADER = 'x-oro-hash-navigation';
+    public const HASH_NAVIGATION_HEADER = 'x-oro-hash-navigation';
 
     /**
      * @var ContainerInterface

@@ -16,10 +16,10 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 class RegisterMassEditOperationsPass implements CompilerPassInterface
 {
     /** @staticvar */
-    const OPERATION_REGISTRY = 'pim_enrich.mass_edit_action.operation.registry';
+    public const OPERATION_REGISTRY = 'pim_enrich.mass_edit_action.operation.registry';
 
     /** @staticvar */
-    const OPERATION_TAG = 'pim_enrich.mass_edit_action';
+    public const OPERATION_TAG = 'pim_enrich.mass_edit_action';
 
     /** @var ReferenceFactory */
     protected $referenceFactory;
@@ -48,7 +48,7 @@ class RegisterMassEditOperationsPass implements CompilerPassInterface
                 $config['alias'],
                 $config['datagrid'],
                 $config['operation_group'],
-                isset($config['acl']) ? $config['acl'] : null
+                $config['acl'] ?? null
             ]);
         }
     }

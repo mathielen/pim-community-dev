@@ -11,7 +11,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 
 class DeleteMassActionHandler implements MassActionHandlerInterface
 {
-    const FLUSH_BATCH_SIZE = 100;
+    public const FLUSH_BATCH_SIZE = 100;
 
     /**
      * @var EntityManager

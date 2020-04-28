@@ -17,7 +17,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class PurgeJobExecutionCommand extends ContainerAwareCommand
 {
-    const DEFAULT_NUMBER_OF_DAYS = 90;
+    public const DEFAULT_NUMBER_OF_DAYS = 90;
 
     /**
      * {@inheritdoc}

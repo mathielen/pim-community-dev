@@ -24,7 +24,7 @@ use Symfony\Component\Console\Question\Question;
  */
 class PurgeCommand extends ContainerAwareCommand
 {
-    const DEFAULT_MORE_THAN_DAYS = 90;
+    public const DEFAULT_MORE_THAN_DAYS = 90;
 
     /**
      * {@inheritdoc}

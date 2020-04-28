@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class GenerateConfigCommand extends ContainerAwareCommand
 {
-    const MAIN_CONFIG_FILE_NAME = 'js/require-config.js';
+    public const MAIN_CONFIG_FILE_NAME = 'js/require-config.js';
 
     /**
      * {@inheritdoc}

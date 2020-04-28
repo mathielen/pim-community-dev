@@ -8,7 +8,7 @@ use Symfony\Component\EventDispatcher\Event;
 
 class ConfigureMenuEvent extends Event
 {
-    const EVENT_NAME = 'oro_menu.configure';
+    public const EVENT_NAME = 'oro_menu.configure';
 
     /**
      * @var FactoryInterface

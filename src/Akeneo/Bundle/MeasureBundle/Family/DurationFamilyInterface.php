@@ -15,45 +15,45 @@ interface DurationFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Duration';
+    public const FAMILY = 'Duration';
     
     /**
      * @staticvar string
      */
-    const MILLISECOND = 'MILLISECOND';
+    public const MILLISECOND = 'MILLISECOND';
 
     /**
      * @staticvar string
      */
-    const SECOND = 'SECOND';
+    public const SECOND = 'SECOND';
 
     /**
      * @staticvar string
      */
-    const MINUTE = 'MINUTE';
+    public const MINUTE = 'MINUTE';
 
     /**
      * @staticvar string
      */
-    const HOUR = 'HOUR';
+    public const HOUR = 'HOUR';
 
     /**
      * @staticvar string
      */
-    const DAY = 'DAY';
+    public const DAY = 'DAY';
 
     /**
      * @staticvar string
      */
-    const WEEK = 'WEEK';
+    public const WEEK = 'WEEK';
 
     /**
      * @staticvar string
      */
-    const MONTH = 'MONTH';
+    public const MONTH = 'MONTH';
 
     /**
      * @staticvar string
      */
-    const YEAR = 'YEAR';
+    public const YEAR = 'YEAR';
 }

@@ -73,7 +73,7 @@ class PriceConverter extends AbstractValueConverter
                     $priceValue = null;
                 }
 
-                $currency = isset($tokens[1]) ? $tokens[1] : null;
+                $currency = $tokens[1] ?? null;
             }
         }
 

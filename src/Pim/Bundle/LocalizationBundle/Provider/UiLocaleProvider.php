@@ -16,7 +16,7 @@ use Symfony\Component\Translation\TranslatorInterface;
  */
 class UiLocaleProvider implements LocaleProviderInterface
 {
-    const MAIN_LOCALE = 'en';
+    public const MAIN_LOCALE = 'en';
 
     /** @var TranslatorInterface */
     protected $translator;

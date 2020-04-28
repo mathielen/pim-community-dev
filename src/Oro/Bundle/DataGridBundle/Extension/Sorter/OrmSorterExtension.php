@@ -14,17 +14,17 @@ class OrmSorterExtension extends AbstractExtension
     /**
      * Query param
      */
-    const SORTERS_ROOT_PARAM = '_sort_by';
+    public const SORTERS_ROOT_PARAM = '_sort_by';
 
     /**
      * Ascending sorting direction
      */
-    const DIRECTION_ASC = "ASC";
+    public const DIRECTION_ASC = "ASC";
 
     /**
      * Descending sorting direction
      */
-    const DIRECTION_DESC = "DESC";
+    public const DIRECTION_DESC = "DESC";
 
     /**
      * {@inheritDoc}
@@ -157,7 +157,7 @@ class OrmSorterExtension extends AbstractExtension
         }
 
         foreach ($sortBy as $column => $direction) {
-            $sorter = isset($sorters[$column]) ? $sorters[$column] : false;
+            $sorter = $sorters[$column] ?? false;
 
             if ($sorter !== false) {
                 $direction = $this->normalizeDirection($direction);

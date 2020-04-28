@@ -30,7 +30,8 @@ class JUnitFormatter extends BaseFormatter
         $name .= $event instanceof OutlineExampleEvent
             ? ', Ex #' . ($event->getIteration() + 1)
             : '';
-        $caseStats = sprintf('classname="%s" name="%s" time="%F" assertions="%d"',
+        $caseStats = sprintf(
+            'classname="%s" name="%s" time="%F" assertions="%d"',
             htmlspecialchars($className),
             htmlspecialchars($name),
             $time,

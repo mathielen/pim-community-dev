@@ -68,7 +68,7 @@ class TitleIndexUpdateCommand extends ContainerAwareCommand
      */
     private function checkMethod($requirements)
     {
-        $method = isset($requirements['_method']) ?  $requirements['_method'] : 'ANY';
+        $method = $requirements['_method'] ?? 'ANY';
 
         $allowed = ['GET', 'POST', 'ANY'];
         $method = !is_array($method) ? explode('|', $method) : $method;

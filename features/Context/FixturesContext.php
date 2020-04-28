@@ -1121,7 +1121,7 @@ class FixturesContext extends BaseFixturesContext
                 $attributeCode = $attribute->getCode();
                 $localeCode    = $infos['locale_code'];
                 $scopeCode     = $infos['scope_code'];
-                $priceCurrency = isset($infos['price_currency']) ? $infos['price_currency'] : null;
+                $priceCurrency = $infos['price_currency'] ?? null;
                 $productValue  = $product->getValue($attributeCode, $localeCode, $scopeCode);
 
                 if ('' === $value) {

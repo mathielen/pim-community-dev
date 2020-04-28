@@ -29,8 +29,8 @@ class TranslatorProxy
      */
     public function trans($value, array $options = [])
     {
-        $parameters = isset($options['parameters']) ? $options['parameters'] : [];
-        $domain = isset($options['domain']) ? $options['domain'] : [];
+        $parameters = $options['parameters'] ?? [];
+        $domain = $options['domain'] ?? [];
 
         return $this->translator->trans($value, $parameters, $domain);
     }

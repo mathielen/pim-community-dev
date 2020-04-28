@@ -6,7 +6,7 @@ use Oro\Bundle\NavigationBundle\Title\TitleReader\ConfigReader;
 
 class ConfigReaderTest extends \PHPUnit_Framework_TestCase
 {
-    const TEST_ROUTE = 'test_route';
+    public const TEST_ROUTE = 'test_route';
 
     /**
      * @var ConfigReader

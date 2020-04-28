@@ -29,7 +29,7 @@ use Doctrine\ORM\PersistentCollection;
  */
 class DoctrineJobRepository implements JobRepositoryInterface
 {
-    const DATETIME_FORMAT = 'Y-m-d H:i:s';
+    public const DATETIME_FORMAT = 'Y-m-d H:i:s';
 
     /* @var EntityManager */
     protected $jobManager = null;
@@ -267,9 +267,9 @@ class DoctrineJobRepository implements JobRepositoryInterface
         $item = []
     ) {
         $sqlQuery = <<<SQL
-INSERT INTO akeneo_batch_warning (step_execution_id, reason, reason_parameters, item)
-VALUES (:step_execution_id, :reason, :reason_parameters, :item)
-SQL;
+            INSERT INTO akeneo_batch_warning (step_execution_id, reason, reason_parameters, item)
+            VALUES (:step_execution_id, :reason, :reason_parameters, :item)
+            SQL;
 
         $connection = $this->jobManager->getConnection();
 

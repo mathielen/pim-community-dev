@@ -16,13 +16,13 @@ use Symfony\Component\DependencyInjection\Reference;
 class RegisterProductQuerySorterPass implements CompilerPassInterface
 {
     /** @staticvar integer */
-    const DEFAULT_PRIORITY = 25;
+    public const DEFAULT_PRIORITY = 25;
 
     /** @staticvar string */
-    const QUERY_SORTER_REGISTRY = 'pim_catalog.query.sorter.registry';
+    public const QUERY_SORTER_REGISTRY = 'pim_catalog.query.sorter.registry';
 
     /** @staticvar string */
-    const QUERY_SORTER_TAG = 'pim_catalog.doctrine.query.sorter';
+    public const QUERY_SORTER_TAG = 'pim_catalog.doctrine.query.sorter';
 
     /**
      * {@inheritdoc}
@@ -64,7 +64,7 @@ class RegisterProductQuerySorterPass implements CompilerPassInterface
         $sortedServices = [];
         foreach ($services as $serviceId => $tags) {
             foreach ($tags as $tag) {
-                $priority = isset($tag['priority']) ? $tag['priority'] : self::DEFAULT_PRIORITY;
+                $priority = $tag['priority'] ?? self::DEFAULT_PRIORITY;
                 $sortedServices[$priority][] = new Reference($serviceId);
             }
         }

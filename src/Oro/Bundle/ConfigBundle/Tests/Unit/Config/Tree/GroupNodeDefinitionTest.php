@@ -5,8 +5,8 @@ use Oro\Bundle\ConfigBundle\Config\Tree\GroupNodeDefinition;
 
 class GroupNodeDefinitionTest extends \PHPUnit_Framework_TestCase
 {
-    const TEST_NAME = 'testNodeName';
-    const TEST_LEVEL = 2;
+    public const TEST_NAME = 'testNodeName';
+    public const TEST_LEVEL = 2;
 
     protected static function getTestGroup()
     {

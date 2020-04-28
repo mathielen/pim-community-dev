@@ -8,7 +8,7 @@ use Oro\Bundle\DataGridBundle\Provider\ConfigurationProvider;
 
 class ManagerTest extends \PHPUnit_Framework_TestCase
 {
-    const TEST_NAME = 'testGrid';
+    public const TEST_NAME = 'testGrid';
 
     /** @var Manager */
     protected $manager;

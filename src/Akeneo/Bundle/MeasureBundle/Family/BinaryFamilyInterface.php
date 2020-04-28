@@ -15,35 +15,35 @@ interface BinaryFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Binary';
+    public const FAMILY = 'Binary';
 
     /**
      * @staticvar string
      */
-    const BIT = 'BIT';
+    public const BIT = 'BIT';
 
     /**
      * @staticvar string
      */
-    const BYTE = 'BYTE';
+    public const BYTE = 'BYTE';
 
     /**
      * @staticvar string
      */
-    const KILOBYTE = 'KILOBYTE';
+    public const KILOBYTE = 'KILOBYTE';
 
     /**
      * @staticvar string
      */
-    const MEGABYTE = 'MEGABYTE';
+    public const MEGABYTE = 'MEGABYTE';
 
     /**
      * @staticvar string
      */
-    const GIGABYTE = 'GIGABYTE';
+    public const GIGABYTE = 'GIGABYTE';
 
     /**
      * @staticvar string
      */
-    const TERABYTE = 'TERABYTE';
+    public const TERABYTE = 'TERABYTE';
 }

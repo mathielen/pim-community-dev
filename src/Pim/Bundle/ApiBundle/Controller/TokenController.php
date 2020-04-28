@@ -67,6 +67,6 @@ class TokenController
             $messages[OAuth2::ERROR_INVALID_GRANT]   = 'Refresh token is invalid or has expired';
         }
 
-        return isset($messages[$errorCode]) ? $messages[$errorCode] : null;
+        return $messages[$errorCode] ?? null;
     }
 }

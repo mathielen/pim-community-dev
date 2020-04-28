@@ -25,7 +25,7 @@ use Symfony\Component\HttpFoundation\Request;
 class MassActionDispatcher
 {
     /** @staticvar string */
-    const FAMILY_GRID_NAME = 'family-grid';
+    public const FAMILY_GRID_NAME = 'family-grid';
 
     /** @var MassActionHandlerRegistry */
     protected $handlerRegistry;
@@ -183,7 +183,7 @@ class MassActionDispatcher
      */
     protected function prepareInsetParameter(array $parameters)
     {
-        return isset($parameters['inset']) ? $parameters['inset'] : true;
+        return $parameters['inset'] ?? true;
     }
 
     /**
@@ -193,7 +193,7 @@ class MassActionDispatcher
      */
     protected function prepareValuesParameter(array $parameters)
     {
-        return isset($parameters['values']) ? $parameters['values'] : [];
+        return $parameters['values'] ?? [];
     }
 
     /**
@@ -203,7 +203,7 @@ class MassActionDispatcher
      */
     protected function prepareFiltersParameter(array $parameters)
     {
-        return isset($parameters['filters']) ? $parameters['filters'] : [];
+        return $parameters['filters'] ?? [];
     }
 
     /**

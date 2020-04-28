@@ -15,7 +15,7 @@ interface DecibelFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Decibel';
+    public const FAMILY = 'Decibel';
     
-    const DECIBEL = 'DECIBEL';
+    public const DECIBEL = 'DECIBEL';
 }

@@ -16,13 +16,13 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 class AkeneoStorageUtilsBundle extends Bundle
 {
     /** @staticvar string */
-    const DOCTRINE_MONGODB = '\Doctrine\Bundle\MongoDBBundle\DependencyInjection\Compiler\DoctrineMongoDBMappingsPass';
+    public const DOCTRINE_MONGODB = '\Doctrine\Bundle\MongoDBBundle\DependencyInjection\Compiler\DoctrineMongoDBMappingsPass';
 
     /** @staticvar string */
-    const ODM_ENTITIES_TYPE = 'entities';
+    public const ODM_ENTITIES_TYPE = 'entities';
 
     /** @staticvar string */
-    const ODM_ENTITY_TYPE = 'entity';
+    public const ODM_ENTITY_TYPE = 'entity';
 
     /**
      * Register custom doctrine types

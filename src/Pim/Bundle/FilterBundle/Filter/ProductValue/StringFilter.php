@@ -90,7 +90,7 @@ class StringFilter extends OroStringFilter
             return false;
         }
 
-        $data['type'] = isset($data['type']) ? $data['type'] : null;
+        $data['type'] = $data['type'] ?? null;
 
         return $data;
     }

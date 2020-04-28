@@ -21,8 +21,8 @@ use Symfony\Component\Console\Output\BufferedOutput;
  */
 abstract class ApiTestCase extends WebTestCase
 {
-    const USERNAME = 'admin';
-    const PASSWORD = 'admin';
+    public const USERNAME = 'admin';
+    public const PASSWORD = 'admin';
 
     /**
      * @return Configuration
@@ -118,7 +118,9 @@ abstract class ApiTestCase extends WebTestCase
     protected function authenticate($clientId, $secret, $username, $password)
     {
         $webClient = static::createClient();
-        $webClient->request('POST', 'api/oauth/v1/token',
+        $webClient->request(
+            'POST',
+            'api/oauth/v1/token',
             [
                 'username'   => $username,
                 'password'   => $password,

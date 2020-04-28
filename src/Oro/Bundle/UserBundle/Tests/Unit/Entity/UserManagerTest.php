@@ -11,9 +11,9 @@ use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 
 class UserManagerTest extends \PHPUnit_Framework_TestCase
 {
-    const USER_CLASS = 'Pim\Bundle\UserBundle\Entity\UserInterface';
-    const TEST_NAME = 'Jack';
-    const TEST_EMAIL = 'jack@jackmail.net';
+    public const USER_CLASS = 'Pim\Bundle\UserBundle\Entity\UserInterface';
+    public const TEST_NAME = 'Jack';
+    public const TEST_EMAIL = 'jack@jackmail.net';
 
     /**
      * @var UserInterface

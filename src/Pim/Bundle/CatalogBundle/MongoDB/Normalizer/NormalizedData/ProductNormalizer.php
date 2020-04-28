@@ -17,25 +17,25 @@ use Symfony\Component\Serializer\SerializerInterface;
 class ProductNormalizer implements NormalizerInterface, SerializerAwareInterface
 {
     /** @staticvar string */
-    const FAMILY_FIELD = 'family';
+    public const FAMILY_FIELD = 'family';
 
     /** @staticvar string */
-    const GROUPS_FIELD = 'groups';
+    public const GROUPS_FIELD = 'groups';
 
     /** @staticvar string */
-    const IN_GROUP_FIELD = 'in_group';
+    public const IN_GROUP_FIELD = 'in_group';
 
     /** @staticvar string */
-    const COMPLETENESSES_FIELD = 'completenesses';
+    public const COMPLETENESSES_FIELD = 'completenesses';
 
     /** @staticvar string */
-    const ENABLED_FIELD = 'enabled';
+    public const ENABLED_FIELD = 'enabled';
 
     /** @staticvar string */
-    const CREATED_FIELD = 'created';
+    public const CREATED_FIELD = 'created';
 
     /** @staticvar string */
-    const UPDATED_FIELD = 'updated';
+    public const UPDATED_FIELD = 'updated';
 
     /** @var SerializerInterface */
     protected $serializer;

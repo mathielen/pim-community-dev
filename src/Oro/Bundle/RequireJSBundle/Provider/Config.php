@@ -8,7 +8,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class Config
 {
-    const REQUIREJS_CONFIG_CACHE_KEY = 'requirejs_config';
+    public const REQUIREJS_CONFIG_CACHE_KEY = 'requirejs_config';
 
     /**
      * @var \Doctrine\Common\Cache\CacheProvider

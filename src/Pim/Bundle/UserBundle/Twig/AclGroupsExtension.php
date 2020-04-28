@@ -109,11 +109,11 @@ class AclGroupsExtension extends \Twig_Extension
     {
         $groups = [];
         foreach ($config as $groupName => $groupConfig) {
-            $permissionGroup = isset($groupConfig['permission_group']) ? $groupConfig['permission_group'] : 'action';
+            $permissionGroup = $groupConfig['permission_group'] ?? 'action';
 
             $groups[$permissionGroup][] = [
                 'name'  => $groupName,
-                'order' => isset($groupConfig['order']) ? $groupConfig['order'] : -1
+                'order' => $groupConfig['order'] ?? -1
             ];
         }
 

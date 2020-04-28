@@ -36,7 +36,7 @@ class OptionsTransformer
                 $scope
             );
             $backendType = $attribute['backendType'];
-            $options = isset($normalizedData[$fieldCode]) ? $normalizedData[$fieldCode] : [];
+            $options = $normalizedData[$fieldCode] ?? [];
 
             if ($backendType === 'option') {
                 $options = $this->filterOptionValues($options, $locale);

@@ -195,8 +195,8 @@ class Product implements ArrayConverterInterface
      */
     protected function prepareOptions(array $options)
     {
-        $options['with_associations'] = isset($options['with_associations']) ? $options['with_associations'] : true;
-        $options['default_values'] = isset($options['default_values']) ? $options['default_values'] : [];
+        $options['with_associations'] = $options['with_associations'] ?? true;
+        $options['default_values'] = $options['default_values'] ?? [];
 
         return $options;
     }

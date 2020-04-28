@@ -16,13 +16,13 @@ use Symfony\Component\DependencyInjection\Reference;
 class RegisterCompleteCheckerPass implements CompilerPassInterface
 {
     /** @staticvar int The default render type provider priority */
-    const DEFAULT_PRIORITY = 100;
+    public const DEFAULT_PRIORITY = 100;
 
     /** @staticvar string */
-    const CHAINED = 'pim_catalog.completeness.checker.chained';
+    public const CHAINED = 'pim_catalog.completeness.checker.chained';
 
     /** @staticvar string */
-    const SERVICE_TAG = 'pim_catalog.completeness.checker.product_value';
+    public const SERVICE_TAG = 'pim_catalog.completeness.checker.product_value';
 
     /**
      * {@inheritdoc}
@@ -41,7 +41,7 @@ class RegisterCompleteCheckerPass implements CompilerPassInterface
 
         foreach ($taggedServices as $serviceId => $tags) {
             foreach ($tags as $tag) {
-                $priority = isset($tag['priority']) ? $tag['priority'] : static::DEFAULT_PRIORITY;
+                $priority = $tag['priority'] ?? static::DEFAULT_PRIORITY;
                 if (!isset($services[$priority])) {
                     $services[$priority] = [];
                 }

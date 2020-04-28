@@ -30,9 +30,9 @@ use Symfony\Component\Validator\Validator;
  */
 class BatchCommand extends ContainerAwareCommand
 {
-    const EXIT_SUCCESS_CODE = 0;
-    const EXIT_ERROR_CODE = 1;
-    const EXIT_WARNING_CODE = 2;
+    public const EXIT_SUCCESS_CODE = 0;
+    public const EXIT_ERROR_CODE = 1;
+    public const EXIT_WARNING_CODE = 2;
 
     /**
      * {@inheritdoc}

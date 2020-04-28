@@ -65,12 +65,15 @@ class AssertionContext extends RawMinkContext
      */
     public function iShouldSeeTheTitle($expectedTitle)
     {
-        $this->spin(function () use ($expectedTitle) {
+        $this->spin(
+            function () use ($expectedTitle) {
             return trim($this->getCurrentPage()->getHeadTitle()) === trim($expectedTitle);
-        }, sprintf(
+        },
+            sprintf(
             'Incorrect title. Expected "%s", found "%s"',
             $expectedTitle,
-            $this->getCurrentPage()->getHeadTitle())
+            $this->getCurrentPage()->getHeadTitle()
+        )
         );
     }
 
@@ -462,8 +465,8 @@ class AssertionContext extends RawMinkContext
                 );
             }
 
-            $newValue = isset($data['value']) ? $data['value'] : $data['after'];
-            $oldValue = isset($data['before']) ? $data['before'] : null;
+            $newValue = $data['value'] ?? $data['after'];
+            $oldValue = $data['before'] ?? null;
 
             if ($matchingRow->find('css', 'td:nth-of-type(2)')->getText() !== $oldValue && $oldValue) {
                 throw $this->createExpectationException(

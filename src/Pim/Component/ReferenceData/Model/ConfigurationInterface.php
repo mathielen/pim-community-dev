@@ -11,8 +11,8 @@ namespace Pim\Component\ReferenceData\Model;
  */
 interface ConfigurationInterface
 {
-    const TYPE_SIMPLE = 'simple';
-    const TYPE_MULTI = 'multi';
+    public const TYPE_SIMPLE = 'simple';
+    public const TYPE_MULTI = 'multi';
 
     /**
      * @return string

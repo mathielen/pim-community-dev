@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class ServiceLinkPass implements CompilerPassInterface
 {
-    const TAG_NAME = 'oro_service_link';
+    public const TAG_NAME = 'oro_service_link';
 
     /**
      * {@inheritdoc}

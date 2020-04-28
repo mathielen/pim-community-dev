@@ -52,20 +52,20 @@ class Acl implements \Serializable
             return;
         }
 
-        $this->id = isset($data['id']) ? $data['id'] : null;
+        $this->id = $data['id'] ?? null;
         if (empty($this->id) || strpos($this->id, ' ') !== false) {
             throw new \InvalidArgumentException('ACL id must not be empty or contain blank spaces.');
         }
 
-        $this->type = isset($data['type']) ? $data['type'] : null;
+        $this->type = $data['type'] ?? null;
         if (empty($this->type)) {
             throw new \InvalidArgumentException(sprintf('ACL type must not be empty. Id: %s.', $this->id));
         }
 
-        $this->permission = isset($data['permission']) ? $data['permission'] : '';
-        $this->class = isset($data['class']) ? $data['class'] : '';
-        $this->group = isset($data['group_name']) ? $data['group_name'] : '';
-        $this->label = isset($data['label']) ? $data['label'] : '';
+        $this->permission = $data['permission'] ?? '';
+        $this->class = $data['class'] ?? '';
+        $this->group = $data['group_name'] ?? '';
+        $this->label = $data['label'] ?? '';
     }
 
     /**

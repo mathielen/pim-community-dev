@@ -83,7 +83,7 @@ class RefreshCommand extends ContainerAwareCommand
             foreach ($pendingVersions as $pending) {
                 $key = sprintf('%s_%s', $pending->getResourceName(), $pending->getResourceId());
 
-                $previousVersion = isset($previousVersions[$key]) ? $previousVersions[$key] : null;
+                $previousVersion = $previousVersions[$key] ?? null;
                 $version = $this->createVersion($pending, $previousVersion);
 
                 if ($version) {

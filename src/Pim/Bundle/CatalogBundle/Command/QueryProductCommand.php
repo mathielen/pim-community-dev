@@ -21,7 +21,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class QueryProductCommand extends ContainerAwareCommand
 {
     /* @var integer */
-    const DEFAULT_PAGE_SIZE = 10;
+    public const DEFAULT_PAGE_SIZE = 10;
 
     /**
      * {@inheritdoc}

@@ -28,7 +28,7 @@ class IsThereUserWithoutRole
     public function __invoke($roleIdToExclude)
     {
         $stmt = $this->em->getConnection()->prepare(
-        'SELECT COUNT(username) AS count FROM oro_user u LEFT JOIN oro_user_access_role r ON u.id = r.user_id AND role_id != :roleId WHERE role_id IS NULL'
+            'SELECT COUNT(username) AS count FROM oro_user u LEFT JOIN oro_user_access_role r ON u.id = r.user_id AND role_id != :roleId WHERE role_id IS NULL'
         );
         $stmt->bindValue('roleId', $roleIdToExclude, \PDO::PARAM_INT);
 

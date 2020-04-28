@@ -17,10 +17,10 @@ use Symfony\Component\Validator\Constraints as Assert;
 class LengthGuesser implements ConstraintGuesserInterface
 {
     /** @staticvar int */
-    const TEXT_FIELD_LEMGTH = 255;
+    public const TEXT_FIELD_LEMGTH = 255;
 
     /** @staticvar int */
-    const TEXTAREA_FIELD_LEMGTH = 65535;
+    public const TEXTAREA_FIELD_LEMGTH = 65535;
 
     /**
      * {@inheritdoc}

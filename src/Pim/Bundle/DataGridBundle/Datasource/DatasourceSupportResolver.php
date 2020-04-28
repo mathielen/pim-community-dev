@@ -15,10 +15,10 @@ use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 class DatasourceSupportResolver
 {
     /** @staticvar string */
-    const DATASOURCE_SUPPORT_ORM = 'orm';
+    public const DATASOURCE_SUPPORT_ORM = 'orm';
 
     /** @staticvar string */
-    const DATASOURCE_SUPPORT_MONGODB = 'mongodb';
+    public const DATASOURCE_SUPPORT_MONGODB = 'mongodb';
 
     /** @var string */
     protected $storageDriver;

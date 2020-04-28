@@ -15,15 +15,15 @@ interface EnergyFamilyInterface
      * Family energy name
      * @staticvar string
      */
-    const FAMILY = 'Energy';
+    public const FAMILY = 'Energy';
 
     /**
      * @staticvar string
      */
-    const KILOCALORIE = 'KILOCALORIE';
+    public const KILOCALORIE = 'KILOCALORIE';
 
     /**
      * @staticvar string
      */
-    const KILOJOULE = 'KILOJOULE';
+    public const KILOJOULE = 'KILOJOULE';
 }

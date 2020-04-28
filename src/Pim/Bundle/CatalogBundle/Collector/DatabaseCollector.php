@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 class DatabaseCollector extends DataCollector
 {
     /** @var int the max number of product value allowed before having to switch to MongoBD */
-    const MYSQL_PRODUCT_VALUE_LIMIT = 5000000;
+    public const MYSQL_PRODUCT_VALUE_LIMIT = 5000000;
 
     /** @var ProductValueCounterRepositoryInterface */
     protected $productValueRepository;

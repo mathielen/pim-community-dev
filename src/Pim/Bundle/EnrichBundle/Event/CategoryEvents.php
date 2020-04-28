@@ -19,7 +19,7 @@ final class CategoryEvents
      *
      * @staticvar string
      */
-    const PRE_EDIT = 'pim_enrich.category.pre_edit';
+    public const PRE_EDIT = 'pim_enrich.category.pre_edit';
 
     /**
      * This event is dispatched each time a category has been edited.
@@ -29,7 +29,7 @@ final class CategoryEvents
      *
      * @staticvar string
      */
-    const POST_EDIT = 'pim_enrich.category.post_edit';
+    public const POST_EDIT = 'pim_enrich.category.post_edit';
 
     /**
      * This event is dispatched each time a category is being created.
@@ -39,7 +39,7 @@ final class CategoryEvents
      *
      * @staticvar string
      */
-    const PRE_CREATE = 'pim_enrich.category.pre_create';
+    public const PRE_CREATE = 'pim_enrich.category.pre_create';
 
     /**
      * This event is dispatched each time a category has been created.
@@ -49,5 +49,5 @@ final class CategoryEvents
      *
      * @staticvar string
      */
-    const POST_CREATE = 'pim_enrich.category.post_create';
+    public const POST_CREATE = 'pim_enrich.category.post_create';
 }

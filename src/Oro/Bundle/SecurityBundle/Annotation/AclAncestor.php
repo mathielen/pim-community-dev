@@ -21,7 +21,7 @@ class AclAncestor implements \Serializable
      */
     public function __construct(array $data)
     {
-        $this->id = isset($data['value']) ? $data['value'] : null;
+        $this->id = $data['value'] ?? null;
         if (empty($this->id) || strpos($this->id, ' ') !== false) {
             throw new \InvalidArgumentException('ACL id must not be empty or contain blank spaces.');
         }

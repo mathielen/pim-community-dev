@@ -19,7 +19,7 @@ use Symfony\Component\Filesystem\Filesystem;
 class AnalyzeProductCsvCommand extends ContainerAwareCommand
 {
     /** @staticvar string */
-    const DEFAULT_DELIMITER = ";";
+    public const DEFAULT_DELIMITER = ";";
 
     /**
      * {@inheritdoc}

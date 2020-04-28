@@ -18,15 +18,15 @@ use Symfony\Component\Serializer\Normalizer\SerializerAwareNormalizer;
  */
 class PropertiesNormalizer extends SerializerAwareNormalizer implements NormalizerInterface
 {
-    const FIELD_IDENTIFIER = 'identifier';
-    const FIELD_FAMILY = 'family';
-    const FIELD_GROUPS = 'groups';
-    const FIELD_VARIANT_GROUP = 'variant_group';
-    const FIELD_CATEGORIES = 'categories';
-    const FIELD_ENABLED = 'enabled';
-    const FIELD_VALUES = 'values';
-    const FIELD_CREATED = 'created';
-    const FIELD_UPDATED = 'updated';
+    public const FIELD_IDENTIFIER = 'identifier';
+    public const FIELD_FAMILY = 'family';
+    public const FIELD_GROUPS = 'groups';
+    public const FIELD_VARIANT_GROUP = 'variant_group';
+    public const FIELD_CATEGORIES = 'categories';
+    public const FIELD_ENABLED = 'enabled';
+    public const FIELD_VALUES = 'values';
+    public const FIELD_CREATED = 'created';
+    public const FIELD_UPDATED = 'updated';
 
     /** @var CollectionFilterInterface */
     private $filter;

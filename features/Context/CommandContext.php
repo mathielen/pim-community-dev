@@ -76,7 +76,7 @@ class CommandContext extends PimContext
         $getCommandTester = new CommandTester($getCommand);
 
         foreach ($updates->getHash() as $update) {
-            $username = isset($update['username']) ? $update['username'] : null;
+            $username = $update['username'] ?? null;
 
             $updateCommandTester->execute(
                 [

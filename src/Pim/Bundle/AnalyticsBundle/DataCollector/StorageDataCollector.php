@@ -16,7 +16,7 @@ use Akeneo\Component\Analytics\DataCollectorInterface;
  */
 class StorageDataCollector implements DataCollectorInterface
 {
-    const DIVERGENT_MARIADB_VERSION = '10';
+    public const DIVERGENT_MARIADB_VERSION = '10';
 
     /** @var string */
     protected $catalogStorage;

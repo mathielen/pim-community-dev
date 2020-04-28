@@ -15,45 +15,45 @@ interface ResistanceFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Resistance';
+    public const FAMILY = 'Resistance';
     
     /**
      * @staticvar string
      */
-    const MILLIOHM = 'MILLIOHM';
+    public const MILLIOHM = 'MILLIOHM';
 
     /**
      * @staticvar string
      */
-    const CENTIOHM = 'CENTIOHM';
+    public const CENTIOHM = 'CENTIOHM';
 
     /**
      * @staticvar string
      */
-    const DECIOHM = 'DECIOHM';
+    public const DECIOHM = 'DECIOHM';
 
     /**
      * @staticvar string
      */
-    const OHM = 'OHM';
+    public const OHM = 'OHM';
 
     /**
      * @staticvar string
      */
-    const DEKAOHM = 'DEKAOHM';
+    public const DEKAOHM = 'DEKAOHM';
 
     /**
      * @staticvar string
      */
-    const HECTOHM = 'HECTOHM';
+    public const HECTOHM = 'HECTOHM';
 
     /**
      * @staticvar string
      */
-    const KILOHM = 'KILOHM';
+    public const KILOHM = 'KILOHM';
 
     /**
      * @staticvar string
      */
-    const MEGOHM = 'MEGOHM';
+    public const MEGOHM = 'MEGOHM';
 }

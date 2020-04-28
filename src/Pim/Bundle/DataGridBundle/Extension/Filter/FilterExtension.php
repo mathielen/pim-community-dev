@@ -26,7 +26,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 class FilterExtension extends AbstractExtension
 {
     /** @staticvar string Query param */
-    const FILTER_ROOT_PARAM = '_filter';
+    public const FILTER_ROOT_PARAM = '_filter';
 
     /**
      * @var FilterInterface[]
@@ -226,7 +226,7 @@ class FilterExtension extends AbstractExtension
             ]
         ];
 
-        return isset($gridConfigs[$gridName]) ? $gridConfigs[$gridName] : null;
+        return $gridConfigs[$gridName] ?? null;
     }
 
     /**

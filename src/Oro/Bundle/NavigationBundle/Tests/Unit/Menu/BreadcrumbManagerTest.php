@@ -78,7 +78,9 @@ class BreadcrumbManagerTest extends \PHPUnit_Framework_TestCase
     public function testGetBreadcrumbLabels()
     {
         $item = new MenuItem('test', $this->factory);
-        $item->setExtra('routes', [
+        $item->setExtra(
+            'routes',
+            [
             'another_route',
             '/another_route/',
             'another*route',

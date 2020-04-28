@@ -25,7 +25,7 @@ use Symfony\Component\Templating\EngineInterface;
  */
 class GroupController
 {
-    const MAX_PRODUCTS = 5;
+    public const MAX_PRODUCTS = 5;
 
     /** @var Request */
     protected $request;

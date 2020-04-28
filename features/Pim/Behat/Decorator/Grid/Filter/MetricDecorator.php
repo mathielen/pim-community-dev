@@ -37,7 +37,8 @@ class MetricDecorator extends ElementDecorator
             $unitDropdown->click();
             $this->spin(function () use ($unitDropdown, $unitValue) {
                 $unitDropdown->getParent()->find(
-                    'css', sprintf('.dropdown-menu .choice_value:contains("%s")', $unitValue)
+                    'css',
+                    sprintf('.dropdown-menu .choice_value:contains("%s")', $unitValue)
                 )->click();
 
                 return true;

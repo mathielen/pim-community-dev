@@ -264,7 +264,7 @@ class CompletenessManager
         foreach ($locales as $locale) {
             $localeCode = $locale->getCode();
             $valueCode = $this->getValueCode($attribute, $localeCode, $channel->getCode());
-            $productValue = isset($productValues[$valueCode]) ? $productValues[$valueCode] : null;
+            $productValue = $productValues[$valueCode] ?? null;
             $isIncomplete = (null !== $productValue) &&
                 $this->valueCompleteChecker->supportsValue($productValue) &&
                 !$this->valueCompleteChecker->isComplete($productValue, $channel, $locale);

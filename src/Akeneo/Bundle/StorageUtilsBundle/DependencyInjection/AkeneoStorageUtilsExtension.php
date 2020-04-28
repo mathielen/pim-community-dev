@@ -17,10 +17,10 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class AkeneoStorageUtilsExtension extends Extension
 {
     /** @staticvar string */
-    const DOCTRINE_ORM = 'doctrine/orm';
+    public const DOCTRINE_ORM = 'doctrine/orm';
 
     /** @staticvar string */
-    const DOCTRINE_MONGODB_ODM = 'doctrine/mongodb-odm';
+    public const DOCTRINE_MONGODB_ODM = 'doctrine/mongodb-odm';
 
     /** @var string */
     protected static $storageDriver;

@@ -10,9 +10,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class MenuExtension extends \Twig_Extension
 {
-    const MENU_NAME = 'oro_menu';
+    public const MENU_NAME = 'oro_menu';
 
-    const BREADCRUMBS_TEMPLATE = 'OroNavigationBundle:Menu:breadcrumbs.html.twig';
+    public const BREADCRUMBS_TEMPLATE = 'OroNavigationBundle:Menu:breadcrumbs.html.twig';
 
     /**
      * @var Helper $helper

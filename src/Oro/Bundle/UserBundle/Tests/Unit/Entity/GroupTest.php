@@ -8,7 +8,7 @@ use Oro\Bundle\UserBundle\Entity\Role;
 
 class GroupTest extends \PHPUnit_Framework_TestCase
 {
-    const TEST_ROLE = 'ROLE_FOO';
+    public const TEST_ROLE = 'ROLE_FOO';
 
     /**
      * @var Group

@@ -134,7 +134,8 @@ class ProductProcessor extends AbstractProcessor
                     $property,
                     function ($attributeCode) use ($selectedProperties) {
                         return in_array($attributeCode, $selectedProperties);
-                    }, ARRAY_FILTER_USE_KEY
+                    },
+                    ARRAY_FILTER_USE_KEY
                 );
             } elseif (in_array($codeProperty, $selectedProperties) || 'identifier' === $codeProperty) {
                 $propertiesToExport[$codeProperty] = $property;

@@ -14,40 +14,40 @@ interface PressureFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Pressure';
+    public const FAMILY = 'Pressure';
 
     /**
      * @staticvar string
      */
-    const PASCAL = 'PASCAL';
+    public const PASCAL = 'PASCAL';
 
     /**
      * @staticvar string
      */
-    const HECTOPASCAL = 'HECTOPASCAL';
+    public const HECTOPASCAL = 'HECTOPASCAL';
 
     /**
      * @staticvar string
      */
-    const MMHG = 'MMHG';
+    public const MMHG = 'MMHG';
 
     /**
      * @staticvar string
      */
-    const ATM = 'ATM';
+    public const ATM = 'ATM';
 
     /**
      * @staticvar string
      */
-    const BAR = 'BAR';
+    public const BAR = 'BAR';
 
     /**
      * @staticvar string
      */
-    const MILLIBAR = 'MILLIBAR';
+    public const MILLIBAR = 'MILLIBAR';
 
     /**
      * @staticvar string
      */
-    const TORR = 'TORR';
+    public const TORR = 'TORR';
 }

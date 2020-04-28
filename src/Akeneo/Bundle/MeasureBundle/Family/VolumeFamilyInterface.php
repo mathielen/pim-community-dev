@@ -15,80 +15,80 @@ interface VolumeFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Volume';
+    public const FAMILY = 'Volume';
 
     /**
      * @staticvar string
      */
-    const BARREL = 'BARREL';
+    public const BARREL = 'BARREL';
 
     /**
      * @staticvar string
      */
-    const CENTILITER = 'CENTILITER';
+    public const CENTILITER = 'CENTILITER';
 
     /**
      * @staticvar string
      */
-    const CUBIC_CENTIMETER = 'CUBIC_CENTIMETER';
+    public const CUBIC_CENTIMETER = 'CUBIC_CENTIMETER';
 
     /**
      * @staticvar string
      */
-    const CUBIC_DECIMETER = 'CUBIC_DECIMETER';
+    public const CUBIC_DECIMETER = 'CUBIC_DECIMETER';
 
     /**
      * @staticvar string
      */
-    const CUBIC_FOOT = 'CUBIC_FOOT';
+    public const CUBIC_FOOT = 'CUBIC_FOOT';
 
     /**
      * @staticvar string
      */
-    const CUBIC_INCH = 'CUBIC_INCH';
+    public const CUBIC_INCH = 'CUBIC_INCH';
 
     /**
      * @staticvar string
      */
-    const CUBIC_METER = 'CUBIC_METER';
+    public const CUBIC_METER = 'CUBIC_METER';
 
     /**
      * @staticvar string
      */
-    const CUBIC_MILLIMETER = 'CUBIC_MILLIMETER';
+    public const CUBIC_MILLIMETER = 'CUBIC_MILLIMETER';
 
     /**
      * @staticvar string
      */
-    const CUBIC_YARD = 'CUBIC_YARD';
+    public const CUBIC_YARD = 'CUBIC_YARD';
 
     /**
      * @staticvar string
      */
-    const DECILITER = 'DECILITER';
+    public const DECILITER = 'DECILITER';
 
     /**
      * @staticvar string
      */
-    const GALLON = 'GALLON';
+    public const GALLON = 'GALLON';
 
     /**
      * @staticvar string
      */
-    const LITER = 'LITER';
+    public const LITER = 'LITER';
 
     /**
      * @staticvar string
      */
-    const MILLILITER = 'MILLILITER';
+    public const MILLILITER = 'MILLILITER';
 
     /**
      * @staticvar string
      */
-    const OUNCE = 'OUNCE';
+    public const OUNCE = 'OUNCE';
 
     /**
      * @staticvar string
      */
-    const PINT = 'PINT';
+    public const PINT = 'PINT';
 }

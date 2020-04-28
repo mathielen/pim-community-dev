@@ -44,7 +44,7 @@ class AttributeOptionNormalizer implements NormalizerInterface
      */
     protected function normalizeLabels(AttributeOptionInterface $attributeOption, $context)
     {
-        $locales = isset($context['locales']) ? $context['locales'] : [];
+        $locales = $context['locales'] ?? [];
         $labels = array_fill_keys($locales, null);
 
         foreach ($attributeOption->getOptionValues() as $translation) {

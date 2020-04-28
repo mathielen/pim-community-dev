@@ -18,7 +18,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class CleanMongoDBCommand extends ContainerAwareCommand
 {
-    const MONGODB_PRODUCT_COLLECTION = 'pim_catalog_product';
+    public const MONGODB_PRODUCT_COLLECTION = 'pim_catalog_product';
 
     /** @var array $familyIds */
     protected $familyIds;

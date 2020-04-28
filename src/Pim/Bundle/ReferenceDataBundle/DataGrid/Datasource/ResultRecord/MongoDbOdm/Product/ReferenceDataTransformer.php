@@ -38,7 +38,7 @@ class ReferenceDataTransformer
                 $scope
             );
             $backendType = $attribute['backendType'];
-            $references = isset($normalizedData[$fieldCode]) ? $normalizedData[$fieldCode] : [];
+            $references = $normalizedData[$fieldCode] ?? [];
 
             if (AttributeTypes::BACKEND_TYPE_REF_DATA_OPTION === $backendType) {
                 $references = $this->filterOptionValues($references, $locale);

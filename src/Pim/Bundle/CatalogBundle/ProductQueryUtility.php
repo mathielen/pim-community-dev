@@ -15,13 +15,13 @@ use Pim\Component\Catalog\Model\ProductValueInterface;
 class ProductQueryUtility
 {
     /** @staticvar string */
-    const FIELD_TOKEN_SEPARATOR = '-';
+    public const FIELD_TOKEN_SEPARATOR = '-';
 
     /** @staticvar string */
-    const ELEMENT_TOKEN_SEPARATOR = '.';
+    public const ELEMENT_TOKEN_SEPARATOR = '.';
 
     /** @staticvar string */
-    const NORMALIZED_FIELD = 'normalizedData';
+    public const NORMALIZED_FIELD = 'normalizedData';
 
     /**
      * Normalize the field name from attribute and catalog context

@@ -109,7 +109,7 @@ class MetricFilter extends OroNumberFilter
      */
     public function parseData($data)
     {
-        $data['type'] = isset($data['type']) ? $data['type'] : null;
+        $data['type'] = $data['type'] ?? null;
 
         if (!is_array($data)
             || !array_key_exists('value', $data)

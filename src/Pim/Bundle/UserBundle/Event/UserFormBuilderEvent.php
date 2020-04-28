@@ -14,5 +14,5 @@ use Symfony\Component\EventDispatcher\GenericEvent;
 final class UserFormBuilderEvent extends GenericEvent
 {
     /** @var string Event triggered after a form build */
-    const POST_BUILD = 'pim_user.form.user.post_build';
+    public const POST_BUILD = 'pim_user.form.user.post_build';
 }

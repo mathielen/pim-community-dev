@@ -21,7 +21,7 @@ class TitleTemplate
      */
     public function __construct(array $data)
     {
-        $titleTemplate = isset($data['value']) ? $data['value'] : false;
+        $titleTemplate = $data['value'] ?? false;
 
         if ($titleTemplate === false) {
             throw new \RuntimeException('Template annotation should contain "template" part');

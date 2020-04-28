@@ -14,7 +14,7 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
  */
 class AttributeGroupNormalizer implements NormalizerInterface
 {
-    const ITEM_SEPARATOR = ',';
+    public const ITEM_SEPARATOR = ',';
 
     /** @var string[] */
     protected $supportedFormats = ['flat'];

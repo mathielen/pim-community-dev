@@ -48,14 +48,14 @@ class FilterDataValidator extends ConstraintValidator
 
         foreach ($value['data'] as $data) {
             try {
-                $context = isset($data['context']) ? $data['context'] : [];
+                $context = $data['context'] ?? [];
                 $pqb->addFilter($data['field'], $data['operator'], $data['value'], $context);
             } catch (PropertyException $exception) {
                 $this->context->buildViolation(
-                        $this->translator->trans(
+                    $this->translator->trans(
                             sprintf('pim_catalog.constraint.%s', $exception->getCode())
                         )
-                    )
+                )
                     ->atPath(sprintf('[data][%s][%d]', $data['field'], 0))
                     ->addViolation();
             } catch (\LogicException $exception) {

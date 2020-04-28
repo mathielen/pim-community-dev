@@ -18,16 +18,16 @@ use Pim\Component\Connector\ArrayConverter\FlatToStandard\Product\AttributeColum
 class ProductDenormalizer extends AbstractEntityDenormalizer
 {
     /** @staticvar string */
-    const FIELD_ENABLED = 'enabled';
+    public const FIELD_ENABLED = 'enabled';
 
     /** @staticvar string */
-    const FIELD_FAMILY = 'family';
+    public const FIELD_FAMILY = 'family';
 
     /** @staticvar string */
-    const FIELD_CATEGORIES = 'categories';
+    public const FIELD_CATEGORIES = 'categories';
 
     /** @staticvar string */
-    const FIELD_GROUPS = 'groups';
+    public const FIELD_GROUPS = 'groups';
 
     /** @var AttributeColumnInfoExtractor */
     protected $attrFieldExtractor;

@@ -9,7 +9,7 @@ use Symfony\Component\Form\FormView;
 
 class AbstractChoiceTypeTest extends \PHPUnit_Framework_TestCase
 {
-    const TRANSLATION_PREFIX = 'trans_';
+    public const TRANSLATION_PREFIX = 'trans_';
 
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject

@@ -22,9 +22,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class ProductPdfRenderer implements RendererInterface
 {
-    const PDF_FORMAT = 'pdf';
+    public const PDF_FORMAT = 'pdf';
 
-    const THUMBNAIL_FILTER = 'thumbnail';
+    public const THUMBNAIL_FILTER = 'thumbnail';
 
     /** @var EngineInterface */
     protected $templating;

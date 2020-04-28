@@ -8,8 +8,8 @@ use Symfony\Component\Finder\Finder;
 
 class AclAnnotationLoader extends AbstractLoader implements AclAnnotationLoaderInterface
 {
-    const ANNOTATION_CLASS = 'Oro\Bundle\SecurityBundle\Annotation\Acl';
-    const ANCESTOR_CLASS = 'Oro\Bundle\SecurityBundle\Annotation\AclAncestor';
+    public const ANNOTATION_CLASS = 'Oro\Bundle\SecurityBundle\Annotation\Acl';
+    public const ANCESTOR_CLASS = 'Oro\Bundle\SecurityBundle\Annotation\AclAncestor';
 
     /**
      * @var AnnotationReader

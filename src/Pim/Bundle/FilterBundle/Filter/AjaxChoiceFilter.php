@@ -84,7 +84,7 @@ class AjaxChoiceFilter extends ChoiceFilter
     protected function parseData($data)
     {
         if (isset($data['type']) && in_array($data['type'], [FilterType::TYPE_EMPTY, FilterType::TYPE_NOT_EMPTY])) {
-            $data['value'] = isset($data['value']) ? $data['value'] : null;
+            $data['value'] = $data['value'] ?? null;
 
             return $data;
         }

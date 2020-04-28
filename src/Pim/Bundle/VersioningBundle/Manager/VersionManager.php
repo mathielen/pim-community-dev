@@ -27,7 +27,7 @@ class VersionManager
      *
      * @var string
      */
-    const DEFAULT_SYSTEM_USER = 'admin';
+    public const DEFAULT_SYSTEM_USER = 'admin';
 
     /** @var bool */
     protected $realTimeVersioning = true;

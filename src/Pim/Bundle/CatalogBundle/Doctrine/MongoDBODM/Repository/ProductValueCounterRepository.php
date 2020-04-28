@@ -56,7 +56,8 @@ class ProductValueCounterRepository implements ProductValueCounterRepositoryInte
                                 ]
                             ]
                         ]
-                ]);
+                ]
+            );
 
         return $result['result'][0]['count'];
     }

@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ResetController extends Controller
 {
-    const SESSION_EMAIL = 'oro_user_reset_email';
+    public const SESSION_EMAIL = 'oro_user_reset_email';
 
     /**
      * @Template

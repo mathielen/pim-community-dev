@@ -11,7 +11,7 @@ use Twig_Function_Method;
 
 class MetadataExtension extends Twig_Extension
 {
-    const ROUTE = 'oro_datagrid_index';
+    public const ROUTE = 'oro_datagrid_index';
 
     /** @var ContainerInterface */
     private $container;

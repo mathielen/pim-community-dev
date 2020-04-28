@@ -47,7 +47,8 @@ class PriceDecorator extends ElementDecorator
 
         $currencyDropdown->click();
         $currencyChoice = $currencyDropdown->getParent()->find(
-            'css', sprintf('.dropdown-menu .choice_value[data-value="%s"]', $currency)
+            'css',
+            sprintf('.dropdown-menu .choice_value[data-value="%s"]', $currency)
         );
         if (null === $currencyChoice) {
             throw new \Exception(sprintf('Cannot find the choice for currency %s', $currency));

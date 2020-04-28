@@ -23,7 +23,7 @@ use Symfony\Component\Routing\RouterInterface;
  */
 class JobProfileController
 {
-    const DEFAULT_CREATE_TEMPLATE = 'PimImportExportBundle:%sProfile:create.html.twig';
+    public const DEFAULT_CREATE_TEMPLATE = 'PimImportExportBundle:%sProfile:create.html.twig';
 
     /** @var JobRegistry */
     protected $jobRegistry;

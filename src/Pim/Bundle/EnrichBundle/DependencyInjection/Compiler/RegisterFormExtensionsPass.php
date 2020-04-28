@@ -18,7 +18,7 @@ use Symfony\Component\Yaml\Yaml;
 class RegisterFormExtensionsPass implements CompilerPassInterface
 {
     /** @staticvar string */
-    const PROVIDER_ID = 'pim_enrich.provider.form_extension';
+    public const PROVIDER_ID = 'pim_enrich.provider.form_extension';
 
     /**
      * {@inheritdoc}

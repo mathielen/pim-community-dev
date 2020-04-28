@@ -13,8 +13,8 @@ class AclAwareMenuFactoryExtension implements Factory\ExtensionInterface
     /**#@+
      * ACL Aware MenuFactory constants
      */
-    const ACL_RESOURCE_ID_KEY = 'aclResourceId';
-    const DEFAULT_ACL_POLICY = true;
+    public const ACL_RESOURCE_ID_KEY = 'aclResourceId';
+    public const DEFAULT_ACL_POLICY = true;
     /**#@-*/
 
     /**

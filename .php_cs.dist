@@ -1,0 +1,19 @@
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+	->name('*.php')
+	->notName('*Spec.php')
+	->notName('*Integration.php')
+	->in(__DIR__ . '/features')
+	->in(__DIR__ . '/src')
+;
+
+return PhpCsFixer\Config::create()
+	->setRules([
+		'@PSR2' => true,
+		'linebreak_after_opening_tag' => true,
+		'ordered_imports' => true,
+		'@PHP73Migration' => true,
+	])
+	->setFinder($finder)
+;

@@ -17,7 +17,7 @@ class AnnotationsReader extends Reader
      */
     private $routes = [];
 
-    const ANNOTATION_CLASS = 'Oro\Bundle\NavigationBundle\Annotation\TitleTemplate';
+    public const ANNOTATION_CLASS = 'Oro\Bundle\NavigationBundle\Annotation\TitleTemplate';
 
     public function __construct(KernelInterface $kernel, CommonAnnotationsReader $reader)
     {

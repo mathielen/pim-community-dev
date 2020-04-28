@@ -46,7 +46,7 @@ class SettingsBuilder
                     break;
             }
 
-            $child->scalarNode('scope')->defaultValue(isset($setting['scope']) ? $setting['scope'] : 'app');
+            $child->scalarNode('scope')->defaultValue($setting['scope'] ?? 'app');
         }
 
         $root->children()->append($node->end());

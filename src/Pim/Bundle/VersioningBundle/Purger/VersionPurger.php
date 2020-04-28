@@ -23,7 +23,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class VersionPurger implements VersionPurgerInterface
 {
-    const BULK_THRESHOLD = 1000;
+    public const BULK_THRESHOLD = 1000;
 
     /** @var VersionRepositoryInterface */
     protected $versionRepository;

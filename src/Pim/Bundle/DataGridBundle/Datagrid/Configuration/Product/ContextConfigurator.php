@@ -24,22 +24,22 @@ use Symfony\Component\HttpFoundation\Request;
 class ContextConfigurator implements ConfiguratorInterface
 {
     /** @staticvar string */
-    const PRODUCT_STORAGE_KEY = 'product_storage';
+    public const PRODUCT_STORAGE_KEY = 'product_storage';
 
     /** @staticvar string */
-    const DISPLAYED_ATTRIBUTES_KEY = 'displayed_attribute_ids';
+    public const DISPLAYED_ATTRIBUTES_KEY = 'displayed_attribute_ids';
 
     /** @staticvar string */
-    const CURRENT_GROUP_ID_KEY = 'current_group_id';
+    public const CURRENT_GROUP_ID_KEY = 'current_group_id';
 
     /** @staticvar string */
-    const ASSOCIATION_TYPE_ID_KEY = 'association_type_id';
+    public const ASSOCIATION_TYPE_ID_KEY = 'association_type_id';
 
     /** @staticvar string */
-    const CURRENT_PRODUCT_KEY = 'current_product';
+    public const CURRENT_PRODUCT_KEY = 'current_product';
 
     /** @staticvar string */
-    const USER_CONFIG_ALIAS_KEY = 'user_config_alias';
+    public const USER_CONFIG_ALIAS_KEY = 'user_config_alias';
 
     /** @var DatagridConfiguration */
     protected $configuration;

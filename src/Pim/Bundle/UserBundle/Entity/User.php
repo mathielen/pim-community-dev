@@ -19,9 +19,9 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class User implements UserInterface
 {
-    const ROLE_DEFAULT = 'ROLE_USER';
-    const GROUP_DEFAULT = 'All';
-    const ROLE_ANONYMOUS = 'IS_AUTHENTICATED_ANONYMOUSLY';
+    public const ROLE_DEFAULT = 'ROLE_USER';
+    public const GROUP_DEFAULT = 'All';
+    public const ROLE_ANONYMOUS = 'IS_AUTHENTICATED_ANONYMOUSLY';
 
     /** @var int|string */
     protected $id;

@@ -513,14 +513,14 @@ class ProductController
                     );
                 }
 
-                $context['locale'] = isset($filter['locale']) ? $filter['locale'] : $request->query->get('search_locale');
-                $context['scope'] = isset($filter['scope']) ? $filter['scope'] : $request->query->get('search_scope');
+                $context['locale'] = $filter['locale'] ?? $request->query->get('search_locale');
+                $context['scope'] = $filter['scope'] ?? $request->query->get('search_scope');
 
                 if (isset($filter['locales'])) {
                     $context['locales'] = $filter['locales'];
                 }
 
-                $value = isset($filter['value']) ? $filter['value'] : null;
+                $value = $filter['value'] ?? null;
 
                 $pqb->addFilter($propertyCode, $filter['operator'], $value, $context);
             }
@@ -627,7 +627,7 @@ class ProductController
     protected function populateIdentifierProductValue(array $data)
     {
         $identifierProperty = $this->productRepository->getIdentifierProperties()[0];
-        $identifier = isset($data['identifier']) ? $data['identifier'] : null;
+        $identifier = $data['identifier'] ?? null;
 
         unset($data['values'][$identifierProperty]);
 
@@ -716,7 +716,7 @@ class ProductController
         array $queryParameters,
         array $normalizerOptions
     ) {
-        $encryptedId = isset($queryParameters['search_after']) ? $queryParameters['search_after'] : null;
+        $encryptedId = $queryParameters['search_after'] ?? null;
         $id = null !== $encryptedId ? $this->primaryKeyEncrypter->decrypt($encryptedId) : null;
 
         $productCursor = $this->productRepository->searchAfterIdentifier($pqb, $queryParameters['limit'], $id);

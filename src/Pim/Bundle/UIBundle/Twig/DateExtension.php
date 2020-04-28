@@ -61,14 +61,14 @@ class DateExtension extends \Twig_Extension
             $age = $dateDiff->y;
             return $this->translator->transChoice('oro.age', $age, ['%count%' => $age], 'messages');
         } else {
-            return isset($options['default']) ? $options['default'] : '';
+            return $options['default'] ?? '';
         }
     }
 
     protected function getDateDiff($date, $options)
     {
         if (!$date instanceof \DateTime) {
-            $format = isset($options['format']) ? $options['format'] : 'Y-m-d';
+            $format = $options['format'] ?? 'Y-m-d';
             $tz = (isset($options['timezone'])) ? new \DateTimeZone($options['timezone']) : new \DateTimeZone('UTC');
             $date = \DateTime::createFromFormat($format, $date, $tz);
         }

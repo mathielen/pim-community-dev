@@ -14,7 +14,7 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
  */
 class ProductNormalizer implements NormalizerInterface
 {
-    const FIELD_ASSOCIATIONS = 'associations';
+    public const FIELD_ASSOCIATIONS = 'associations';
 
     /** @var NormalizerInterface */
     private $propertiesNormalizer;

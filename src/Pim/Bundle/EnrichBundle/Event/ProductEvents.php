@@ -19,7 +19,7 @@ final class ProductEvents
      *
      * @staticvar string
      */
-    const CREATE_VALUE_FORM = 'pim_enrich.build_product_value_form';
+    public const CREATE_VALUE_FORM = 'pim_enrich.build_product_value_form';
 
     /**
      * This event is dispatched each time a product is being edited.
@@ -29,7 +29,7 @@ final class ProductEvents
      *
      * @staticvar string
      */
-    const PRE_EDIT = 'pim_enrich.product.pre_edit';
+    public const PRE_EDIT = 'pim_enrich.product.pre_edit';
 
     /**
      * This event is dispatched each time a product has been edited.
@@ -39,7 +39,7 @@ final class ProductEvents
      *
      * @staticvar string
      */
-    const POST_EDIT = 'pim_enrich.product.post_edit';
+    public const POST_EDIT = 'pim_enrich.product.post_edit';
 
     /**
      * This event is dispatched before the parameters are sent to the twig engine
@@ -49,5 +49,5 @@ final class ProductEvents
      *
      * @staticvar string
      */
-    const PRE_RENDER_EDIT = 'pim_enrich.product.pre_render';
+    public const PRE_RENDER_EDIT = 'pim_enrich.product.pre_render';
 }

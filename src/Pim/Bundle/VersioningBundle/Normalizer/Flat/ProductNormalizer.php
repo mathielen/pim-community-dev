@@ -21,19 +21,19 @@ use Symfony\Component\Serializer\Normalizer\SerializerAwareNormalizer;
 class ProductNormalizer extends SerializerAwareNormalizer implements NormalizerInterface
 {
     /** @staticvar string */
-    const FIELD_FAMILY = 'family';
+    public const FIELD_FAMILY = 'family';
 
     /** @staticvar string */
-    const FIELD_GROUPS = 'groups';
+    public const FIELD_GROUPS = 'groups';
 
     /** @staticvar string */
-    const FIELD_CATEGORY = 'categories';
+    public const FIELD_CATEGORY = 'categories';
 
     /** @staticvar string */
-    const FIELD_ENABLED = 'enabled';
+    public const FIELD_ENABLED = 'enabled';
 
     /** @staticvar string */
-    const ITEM_SEPARATOR = ',';
+    public const ITEM_SEPARATOR = ',';
 
     /** @var string[] */
     protected $supportedFormats = ['flat'];

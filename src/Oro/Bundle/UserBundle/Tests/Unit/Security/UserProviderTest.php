@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 
 class UserProviderTest extends \PHPUnit_Framework_TestCase
 {
-    const USER_CLASS = 'Pim\Bundle\UserBundle\Entity\UserInterface';
+    public const USER_CLASS = 'Pim\Bundle\UserBundle\Entity\UserInterface';
 
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject

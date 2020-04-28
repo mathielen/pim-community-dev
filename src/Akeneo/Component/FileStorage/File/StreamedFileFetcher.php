@@ -31,7 +31,7 @@ class StreamedFileFetcher implements FileFetcherInterface
             );
         }
 
-        $headers = isset($options['headers']) ? $options['headers'] : [];
+        $headers = $options['headers'] ?? [];
 
         return new StreamedFileResponse($stream, 200, $headers);
     }

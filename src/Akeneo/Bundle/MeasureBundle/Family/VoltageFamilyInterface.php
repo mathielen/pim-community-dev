@@ -15,40 +15,40 @@ interface VoltageFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Voltage';
+    public const FAMILY = 'Voltage';
 
     /**
      * @staticvar string
      */
-    const MILLIVOLT = 'MILLIVOLT';
+    public const MILLIVOLT = 'MILLIVOLT';
     
     /**
      * @staticvar string
      */
-    const CENTIVOLT = 'CENTIVOLT';
+    public const CENTIVOLT = 'CENTIVOLT';
 
     /**
      * @staticvar string
      */
-    const DECIVOLT = 'DECIVOLT';
+    public const DECIVOLT = 'DECIVOLT';
 
     /**
      * @staticvar string
      */
-    const VOLT = 'VOLT';
+    public const VOLT = 'VOLT';
     
     /**
      * @staticvar string
      */
-    const DEKAVOLT = 'DEKAVOLT';
+    public const DEKAVOLT = 'DEKAVOLT';
 
     /**
      * @staticvar string
      */
-    const HECTOVOLT = 'HECTOVOLT';
+    public const HECTOVOLT = 'HECTOVOLT';
 
     /**
      * @staticvar string
      */
-    const KILOVOLT = 'KILOVOLT';
+    public const KILOVOLT = 'KILOVOLT';
 }

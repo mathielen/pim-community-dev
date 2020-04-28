@@ -20,7 +20,7 @@ use Symfony\Component\Filesystem\Filesystem;
 class InstallCommand extends ContainerAwareCommand
 {
     /** @staticvar string */
-    const APP_NAME = 'Akeneo PIM';
+    public const APP_NAME = 'Akeneo PIM';
 
     /** @var CommandExecutor */
     protected $commandExecutor;

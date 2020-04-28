@@ -14,10 +14,10 @@ use Pim\Component\Catalog\Repository\AssociationTypeRepositoryInterface;
 class AssociationColumnsResolver
 {
     /** @var string */
-    const GROUP_ASSOCIATION_SUFFIX = '-groups';
+    public const GROUP_ASSOCIATION_SUFFIX = '-groups';
 
     /** @var string */
-    const PRODUCT_ASSOCIATION_SUFFIX = '-products';
+    public const PRODUCT_ASSOCIATION_SUFFIX = '-products';
 
     /** @var AssociationTypeRepositoryInterface */
     protected $assocTypeRepository;

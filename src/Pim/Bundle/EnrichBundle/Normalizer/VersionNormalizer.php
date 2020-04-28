@@ -40,7 +40,7 @@ class VersionNormalizer implements NormalizerInterface
     /** @var AttributeRepositoryInterface */
     protected $attributeRepository;
 
-    const ATTRIBUTE_HEADER_SEPARATOR = "-";
+    public const ATTRIBUTE_HEADER_SEPARATOR = "-";
 
     /**
      * @param UserManager                  $userManager

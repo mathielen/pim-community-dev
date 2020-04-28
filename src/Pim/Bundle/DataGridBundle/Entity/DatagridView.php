@@ -14,7 +14,7 @@ use Pim\Bundle\UserBundle\Entity\UserInterface;
 class DatagridView
 {
     /** @staticvar string */
-    const TYPE_PUBLIC = 'public';
+    public const TYPE_PUBLIC = 'public';
 
     /** @var int */
     protected $id;

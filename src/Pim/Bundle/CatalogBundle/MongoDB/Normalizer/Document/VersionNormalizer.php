@@ -18,10 +18,10 @@ use Symfony\Component\Serializer\SerializerInterface;
 class VersionNormalizer implements NormalizerInterface, SerializerAwareInterface
 {
     /** @staticvar string */
-    const FORMAT = 'mongodb_document';
+    public const FORMAT = 'mongodb_document';
 
     /** @staticvar string */
-    const MONGO_ID = '_id';
+    public const MONGO_ID = '_id';
 
     /** @var NormalizerInterface */
     protected $normalizer;

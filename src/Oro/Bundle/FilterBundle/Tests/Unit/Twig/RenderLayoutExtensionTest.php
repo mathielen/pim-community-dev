@@ -11,13 +11,13 @@ class RenderLayoutExtensionTest extends AbstractExtensionTestCase
     /**
      * Testing class name
      */
-    const TESTING_CLASS = 'Oro\Bundle\FilterBundle\Twig\RenderLayoutExtension';
+    public const TESTING_CLASS = 'Oro\Bundle\FilterBundle\Twig\RenderLayoutExtension';
 
     /**#@+
      * Test parameters
      */
-    const TEST_FIRST_EXISTING_TYPE = 'test_first_existing_type';
-    const TEST_SECOND_EXISTING_TYPE = 'test_second_existing_type';
+    public const TEST_FIRST_EXISTING_TYPE = 'test_first_existing_type';
+    public const TEST_SECOND_EXISTING_TYPE = 'test_second_existing_type';
     /**#@-*/
 
     /**

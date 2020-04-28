@@ -15,11 +15,11 @@ use Pim\Component\Catalog\Repository\AttributeRepositoryInterface;
  */
 class PresenterRegistry implements PresenterRegistryInterface
 {
-    const TYPE_PRODUCT_VALUE = 'product_value';
+    public const TYPE_PRODUCT_VALUE = 'product_value';
 
-    const TYPE_PRODUCT_FIELD = 'product_field';
+    public const TYPE_PRODUCT_FIELD = 'product_field';
 
-    const TYPE_ATTRIBUTE_OPTION = 'attribute_option';
+    public const TYPE_ATTRIBUTE_OPTION = 'attribute_option';
 
     /** @var AttributeRepositoryInterface */
     protected $attributeRepository;

@@ -21,13 +21,13 @@ use Psr\Log\LoggerInterface;
 class IndexCreator
 {
     /** @staticvar int 64 is the MongoDB limit for indexes (not configurable) */
-    const MONGODB_INDEXES_LIMIT = 64;
+    public const MONGODB_INDEXES_LIMIT = 64;
 
     /** @staticvar int the default MongoDB index type */
-    const ASCENDANT_INDEX_TYPE = 1;
+    public const ASCENDANT_INDEX_TYPE = 1;
 
     /** @staticvar string the hash MongoDB index type */
-    const HASHED_INDEX_TYPE = 'hashed';
+    public const HASHED_INDEX_TYPE = 'hashed';
 
     /** @var ManagerRegistry */
     protected $managerRegistry;

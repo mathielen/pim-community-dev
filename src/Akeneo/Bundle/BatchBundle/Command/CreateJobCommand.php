@@ -24,8 +24,8 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
  */
 class CreateJobCommand extends ContainerAwareCommand
 {
-    const EXIT_SUCCESS_CODE = 0;
-    const EXIT_ERROR_CODE = 1;
+    public const EXIT_SUCCESS_CODE = 0;
+    public const EXIT_ERROR_CODE = 1;
 
     /**
      * {@inheritdoc}

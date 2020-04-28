@@ -15,30 +15,30 @@ interface FrequencyFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Frequency';
+    public const FAMILY = 'Frequency';
 
     /**
      * @staticvar string
      */
-    const GIGAHERTZ = 'GIGAHERTZ';
+    public const GIGAHERTZ = 'GIGAHERTZ';
 
     /**
      * @staticvar string
      */
-    const KILOHERTZ = 'KILOHERTZ';
+    public const KILOHERTZ = 'KILOHERTZ';
 
     /**
      * @staticvar string
      */
-    const MEGAHERTZ = 'MEGAHERTZ';
+    public const MEGAHERTZ = 'MEGAHERTZ';
 
     /**
      * @staticvar string
      */
-    const TERAHERTZ = 'TERAHERTZ';
+    public const TERAHERTZ = 'TERAHERTZ';
 
     /**
      * @staticvar string
      */
-    const HERTZ = 'HERTZ';
+    public const HERTZ = 'HERTZ';
 }

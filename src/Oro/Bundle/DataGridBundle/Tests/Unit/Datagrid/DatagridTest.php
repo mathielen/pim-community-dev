@@ -6,7 +6,7 @@ use Oro\Bundle\DataGridBundle\Datagrid\Datagrid;
 
 class DatagridTest extends \PHPUnit_Framework_TestCase
 {
-    const TEST_NAME = 'testName';
+    public const TEST_NAME = 'testName';
 
     /** @var Datagrid */
     protected $grid;

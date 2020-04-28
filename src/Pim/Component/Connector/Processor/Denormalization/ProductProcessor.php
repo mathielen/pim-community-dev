@@ -150,7 +150,7 @@ class ProductProcessor extends AbstractProcessor implements ItemProcessorInterfa
      */
     protected function getIdentifier(array $item)
     {
-        return isset($item['identifier']) ? $item['identifier'] : null;
+        return $item['identifier'] ?? null;
     }
 
     /**
@@ -160,7 +160,7 @@ class ProductProcessor extends AbstractProcessor implements ItemProcessorInterfa
      */
     protected function getFamilyCode(array $item)
     {
-        return isset($item['family']) ? $item['family'] : null;
+        return $item['family'] ?? null;
     }
 
     /**

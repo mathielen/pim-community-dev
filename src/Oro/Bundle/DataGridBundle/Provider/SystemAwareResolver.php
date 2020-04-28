@@ -7,11 +7,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class SystemAwareResolver implements ContainerAwareInterface
 {
-    const PARAMETER_REGEX = '#%([\w\._]+)%#';
-    const STATIC_METHOD_REGEX = '#%([\w\._]+)%::([\w\._]+)#';
-    const STATIC_METHOD_CLEAN_REGEX = '#([^\'"%:\s]+)::([\w\._]+)#';
-    const SERVICE_METHOD = '#@([\w\._]+)->([\w\._]+)(\((.*)\))*#';
-    const SERVICE = '#@([\w\._]+)#';
+    public const PARAMETER_REGEX = '#%([\w\._]+)%#';
+    public const STATIC_METHOD_REGEX = '#%([\w\._]+)%::([\w\._]+)#';
+    public const STATIC_METHOD_CLEAN_REGEX = '#([^\'"%:\s]+)::([\w\._]+)#';
+    public const SERVICE_METHOD = '#@([\w\._]+)->([\w\._]+)(\((.*)\))*#';
+    public const SERVICE = '#@([\w\._]+)#';
 
     /**
      * @var ContainerInterface
@@ -95,9 +95,10 @@ class SystemAwareResolver implements ContainerAwareInterface
                 // with class as param
                 $class = $this->container->getParameter($match[1]);
                 // fall-through
+                // no break
             case preg_match(static::STATIC_METHOD_CLEAN_REGEX, $val, $match):
                 // with class real name
-                $class = isset($class) ? $class : $match[1];
+                $class = $class ?? $match[1];
 
                 $method = $match[2];
                 if (is_callable([$class, $method])) {

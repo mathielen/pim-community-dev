@@ -15,40 +15,40 @@ interface IntensityFamilyInterface
      * Family measure name
      * @staticvar string
      */
-    const FAMILY = 'Intensity';
+    public const FAMILY = 'Intensity';
     
     /**
      * @staticvar string
      */
-    const MILLIAMPERE = 'MILLIAMPERE';
+    public const MILLIAMPERE = 'MILLIAMPERE';
     
     /**
      * @staticvar string
      */
-    const CENTIAMPERE = 'CENTIAMPERE';
+    public const CENTIAMPERE = 'CENTIAMPERE';
     
     /**
      * @staticvar string
      */
-    const DECIAMPERE = 'DECIAMPERE';
+    public const DECIAMPERE = 'DECIAMPERE';
     
     /**
      * @staticvar string
      */
-    const AMPERE = 'AMPERE';
+    public const AMPERE = 'AMPERE';
     
     /**
      * @staticvar string
      */
-    const DEKAMPERE = 'DEKAMPERE';
+    public const DEKAMPERE = 'DEKAMPERE';
     
     /**
      * @staticvar string
      */
-    const HECTOAMPERE = 'HECTOAMPERE';
+    public const HECTOAMPERE = 'HECTOAMPERE';
     
     /**
      * @staticvar string
      */
-    const KILOAMPERE = 'KILOAMPERE';
+    public const KILOAMPERE = 'KILOAMPERE';
 }
